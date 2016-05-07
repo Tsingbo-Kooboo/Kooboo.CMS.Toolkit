@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Kooboo.ModuleDevelopment.Binaries</id>
+    <version>4.2.1.1128</version>
+    <title>Kooboo Module Development Binaries</title>
+    <authors>Tsingbo-Kooboo</authors>
+    <owners>Tsingbo-Kooboo</owners>
+    <projectUrl>https://github.com/kooboo/cms</projectUrl>
+    <iconUrl>http://www.kooboo.com/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>this package is used when you want to develop a Module with a stand alone dll.The Views,Themes,Scripts files is keep in Kooboo CMS still.
+
+How to Use:
+Create an empty ClassLibrary and then install this package.</description>
+    <dependencies>
+      <dependency id="Kooboo.CMS.Toolkit" version="4.4.1.318" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Web" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

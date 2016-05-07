@@ -1,0 +1,58 @@
+﻿<#@ template debug="False" hostspecific="True" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="System.Xml.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#@ include file="MultiOutput.tt" #>
+<#@ Output Extension="log" #>
+<#
+	string modelsNamespace = "Forum.Models";
+	string servicesNamespace = "Forum.Services";
+	string repository="bbs";
+	string rootPath = System.IO.Path.Combine(Host.ResolveAssemblyReference("$(SolutionDir)"), "KoobooSites.Web");
+	string schemasFolderPath = System.IO.Path.Combine(rootPath,@"Cms_Data\Contents",repository,"Schemas");
+	if (!Directory.Exists(schemasFolderPath)) { 
+		throw new Exception(String.Format("\"{0}\" not found", schemasFolderPath));
+	}
+	var outputDir = System.IO.Path.Combine(Host.ResolveAssemblyReference("$(ProjectDir)"),"Services");
+	
+	string[] schemaFolderPaths = Directory.GetDirectories(schemasFolderPath).Where(it => !it.EndsWith("svn")).ToArray();
+	foreach(string schemaFolderPath in schemaFolderPaths) {
+		string schemaName = new DirectoryInfo(schemaFolderPath).Name.Trim();
+		AutoGenerateService(modelsNamespace, servicesNamespace, schemaName);
+		string outputFileName = schemaName + "Service.cs";
+		SaveOutput(outputFileName,outputDir);
+	}
+	DeleteOldOutputs();
+#>
+Auto generate services at <#= DateTime.Now #> from <#= schemasFolderPath #>
+<#+ void AutoGenerateService(string modelsNamespace, string servicesNamespace, string schemaName) { #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Kooboo.CMS.Content.Models;
+using Kooboo.CMS.Content.Query;
+using Kooboo.CMS.Toolkit;
+using Kooboo.CMS.Toolkit.Services;
+using <#= modelsNamespace #>;
+
+namespace <#= servicesNamespace #>
+{
+	public class <#= schemaName #>Service : ServiceBase<<#= schemaName #>>
+    {
+        public override <#= schemaName #> Get(TextContent textContent)
+        {
+            if(textContent != null)
+            {
+                return new <#= schemaName #>(textContent);
+            }
+            return null;
+        }
+	}
+}
+<#+ } #>

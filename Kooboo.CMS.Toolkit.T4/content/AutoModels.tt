@@ -1,0 +1,116 @@
+﻿<#@ template debug="False" hostspecific="True" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="System.Xml.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#@ include file="MultiOutput.tt" #>
+<#@ Output Extension="log" #>
+<#
+	string modelsNamespace = "$RootNamespace$.Models";
+	string repository="bbs";
+	string rootPath = System.IO.Path.Combine(Host.ResolveAssemblyReference("$(SolutionDir)"), "KoobooSites.Web");
+	string schemasFolderPath = System.IO.Path.Combine(rootPath,@"Cms_Data\Contents",repository,"Schemas");
+	if (!Directory.Exists(schemasFolderPath)) { 
+		throw new Exception(String.Format("\"{0}\" not found", schemasFolderPath));
+	}
+	var outputDir = System.IO.Path.Combine(Host.ResolveAssemblyReference("$(ProjectDir)"),"Models");
+
+	string[] schemaFolderPaths = Directory.GetDirectories(schemasFolderPath).Where(it => !it.EndsWith("svn")).ToArray();
+	foreach(string schemaFolderPath in schemaFolderPaths) {
+		string schemaName = new DirectoryInfo(schemaFolderPath).Name.Trim();
+		string schemaSettingPath = Path.Combine(schemaFolderPath, "setting.config");
+		AutoGenerateModel(modelsNamespace, schemaSettingPath, schemaName);
+
+		string outputFileName = schemaName + ".cs";
+		SaveOutput(outputFileName,outputDir);
+	}
+	DeleteOldOutputs();
+#>
+Auto generate models at <#= DateTime.Now #> from <#= schemasFolderPath #>
+<#+ void AutoGenerateModel(string modelsNamespace, string schemaSettingPath, string schemaName) { #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Kooboo.CMS.Content.Models;
+using Kooboo.CMS.Content.Query;
+using Kooboo.CMS.Toolkit;  
+
+namespace <#= modelsNamespace #>
+{
+	public class <#= schemaName #> : TextContent
+	{
+		public <#= schemaName #>()
+			: base(new TextContent())
+		{ }
+
+		public <#= schemaName #>(TextContent textContent)
+			: base(textContent)
+		{ }
+
+<#+                                                                                                  
+	XNamespace NS = "http://schemas.datacontract.org/2004/07/Kooboo.CMS.Content.Models";		
+
+	var systemFieldNames = new string[] {
+		"UserKey"
+	};
+	Func<string, string> isSystemFieldName = (string fieldName) => {
+		return systemFieldNames.Contains(fieldName) ? "new " : "";
+	};
+
+	var document = XDocument.Load(schemaSettingPath);
+	var columns = document.Root
+		.Element(NS + "Columns")
+		.Elements(NS + "Column")
+		.Select(it => new {
+			Name = it.Element(NS + "Name").Value, 
+			Modifier = isSystemFieldName(it.Element(NS + "Name").Value), 
+			DataType = GenerateDataType(it.Element(NS + "DataType").Value), 
+			Order = Convert.ToInt32( it.Element(NS + "Order").Value) 
+		})
+		.OrderBy(it => it.Order);
+#>
+		public class FieldNames
+		{
+<#+ foreach (var column in columns) { #>
+			public const string <#= column.Name #> = "<#= column.Name #>";
+<#+ } #>
+		}
+<#+foreach (var column in columns) { #>
+			
+		public <#= column.Modifier #><#= column.DataType[0] #> <#= column.Name #>
+		{
+			get
+			{
+				return this.<#= column.DataType[1] #>(FieldNames.<#= column.Name #>)<#= column.DataType[2]#>;
+			}
+			set
+			{
+				this[FieldNames.<#= column.Name #>] = value<#= column.DataType[3]#>;
+			}
+		}
+<#+ } #>
+	}
+}
+<#+ } #>
+
+<#+
+	string[] GenerateDataType(string dateType) {
+		dateType = dateType.ToLower();
+		switch (dateType) {
+			case "int":
+			case "decimal":
+			case "string":
+			case "bool":
+				return new string[] { dateType, "Get" + dateType[0].ToString().ToUpper() + dateType.Substring(1), "", "" };
+			case "datetime":
+				return new string[] { "DateTime", "GetDateTime", ".ToLocalTime()", ".ToUniversalTime()" };
+		}
+		throw new Exception(String.Format("{0} is an unknow type", dateType));
+	}
+#>
