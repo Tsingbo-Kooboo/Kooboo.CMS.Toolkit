@@ -122,6 +122,7 @@
     <Compile Include="MediaImages.cs" />
     <Compile Include="MediaPdf.cs" />
     <Compile Include="HtmlBlockSelector.cs" />
+    <Compile Include="MemberSelector.cs" />
     <Compile Include="ViewSelector.cs" />
     <Compile Include="PageSelector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -13,6 +13,7 @@ namespace Kooboo.CMS.Toolkit.Controls
         public override void Application_Start(object sender, EventArgs e)
         {
             ControlHelper.RegisterControl(new DateTime());
+            ControlHelper.RegisterControl(new MemberSelector());
             ControlHelper.RegisterControl(new PageSelector());
             ControlHelper.RegisterControl(new ViewSelector());
             ControlHelper.RegisterControl(new HtmlBlockSelector());
