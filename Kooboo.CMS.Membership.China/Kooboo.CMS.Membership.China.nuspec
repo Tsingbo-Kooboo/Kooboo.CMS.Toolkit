@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Kooboo.CMS.Membership.China</id>
+    <version>4.3.0.0109</version>
+    <title>Kooboo.CMS.Membership.China</title>
+    <authors>Kooboo</authors>
+    <owners>Yardi Technology limited</owners>
+    <projectUrl>https://github.com/Kooboo/CMS_Extensions</projectUrl>
+    <iconUrl>http://www.kooboo.com/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Kooboo CMS Membership extensions for China.</description>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>Kooboo CMS Membership China</tags>
+    <dependencies>
+        <dependency id="Kooboo.Core" version="4.3.0.109" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{811F5AB8-B9B7-4EA4-B4EA-9DC4510C0B47}</ProjectGuid>
+    <ProjectGuid>{E078F439-9899-49A1-9A9F-A1B0687E0716}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Kooboo.CMS.Content.UserKeyGenerator.Chinese</RootNamespace>
-    <AssemblyName>Kooboo.CMS.Content.UserKeyGenerator.Chinese</AssemblyName>
+    <RootNamespace>Kooboo.CMS.Membership.China</RootNamespace>
+    <AssemblyName>Kooboo.CMS.Membership.China</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -33,6 +33,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetOpenAuth.AspNet">
+      <HintPath>..\lib\DotNetOpenAuth.AspNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DotNetOpenAuth.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Kooboo, Version=4.4.1.317, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kooboo.Core.4.4.1.0318\lib\Kooboo.dll</HintPath>
       <Private>True</Private>
@@ -119,9 +128,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyRegistrer.cs" />
-    <Compile Include="PinyinConverter.cs" />
-    <Compile Include="UserKeyGenerator.cs" />
+    <Compile Include="..\CMSAssemblyInfoGlobal.cs">
+      <Link>CMSAssemblyInfoGlobal.cs</Link>
+    </Compile>
+    <Compile Include="Clients\BaiduClient.cs" />
+    <Compile Include="Clients\DoubanClient.cs" />
+    <Compile Include="Clients\KaixinClient.cs" />
+    <Compile Include="Clients\RenrenClient.cs" />
+    <Compile Include="Clients\NeteaseClient.cs" />
+    <Compile Include="Clients\TencentClient.cs" />
+    <Compile Include="Core\BaiduClient.cs" />
+    <Compile Include="Core\DoubanClient.cs" />
+    <Compile Include="Core\KaixinClient.cs" />
+    <Compile Include="Core\RenrenClient.cs" />
+    <Compile Include="Core\NeteaseClient.cs" />
+    <Compile Include="Core\SinaClient.cs" />
+    <Compile Include="Core\TencentClient.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\WebRequestExtensions.cs" />
+    <Compile Include="GraphDatas\NeteaseGraphData.cs" />
+    <Compile Include="GraphDatas\RenrenGraphData.cs" />
+    <Compile Include="GraphDatas\SinaGraphData.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Clients\SinaClient.cs" />
+    <Compile Include="GraphDatas\TencentGraphData.cs" />
+    <Compile Include="GraphDatas\WeChatGraphData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
