@@ -28,9 +28,9 @@ namespace Kooboo.CMS.Content.UserKeyGenerator.Chinese
                 {
                     userKey = userKey.Substring(0, 256);
                 }
-                
-                var tmpUserKey = EscapeUserKey(content, userKey).Trim(sperator.ToArray());
 
+                var tmpUserKey = EscapeUserKey(content, userKey).Trim(sperator.ToArray());
+                tmpUserKey = tmpUserKey.Replace(sperator + sperator, sperator);
                 int tries = 0;
                 while (IfUserKeyExists(content, tmpUserKey))
                 {
