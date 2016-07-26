@@ -89,3 +89,4 @@ Call UpdatePackageVersion("..\Publish\Release\Kooboo.CMS.Toolkit.Controls\Kooboo
 Call UpdatePackageVersion("..\Publish\Release\Kooboo.Core\Kooboo.Core.nuspec", version)
 Call UpdatePackageVersion("..\Publish\Release\Kooboo.ModuleDevelopment.Binaries\Kooboo.ModuleDevelopment.Binaries.nuspec", version)
 Call UpdatePackageVersion("..\Publish\Release\Kooboo.CMS.Content.UserKeyGenerator.Chinese\Kooboo.CMS.Content.UserKeyGenerator.Chinese.nuspec", version)
+Call UpdatePackageVersion("..\Publish\Release\Kooboo.CMS.Membership.China\Kooboo.CMS.Membership.China.nuspec", version)

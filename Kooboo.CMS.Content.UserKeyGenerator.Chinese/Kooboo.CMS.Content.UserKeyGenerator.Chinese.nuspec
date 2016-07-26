@@ -6,7 +6,7 @@
     <title>Kooboo.CMS.Content.UserKeyGenerator.Chinese</title>
     <authors>Kooboo</authors>
     <owners>Yardi Technology limited</owners>
-    <projectUrl>https://github.com/Kooboo/Extensions</projectUrl>
+    <projectUrl>https://github.com/Tsingbo-Kooboo/Kooboo.CMS.Toolkit</projectUrl>
     <iconUrl>http://www.kooboo.com/favicon.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Kooboo CMS UserKeyGenerate Extensions for Chinese.</description>

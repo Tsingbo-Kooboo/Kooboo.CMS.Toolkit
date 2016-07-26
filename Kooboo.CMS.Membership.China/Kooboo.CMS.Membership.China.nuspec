@@ -6,7 +6,7 @@
     <title>Kooboo.CMS.Membership.China</title>
     <authors>Kooboo</authors>
     <owners>Yardi Technology limited</owners>
-    <projectUrl>https://github.com/Kooboo/CMS_Extensions</projectUrl>
+    <projectUrl>https://github.com/Tsingbo-Kooboo/Kooboo.CMS.Toolkit</projectUrl>
     <iconUrl>http://www.kooboo.com/favicon.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>The Kooboo CMS Membership extensions for China.</description>
@@ -15,7 +15,7 @@
     <language />
     <tags>Kooboo CMS Membership China</tags>
     <dependencies>
-        <dependency id="Kooboo.Core" version="4.3.0.109" />
+        <dependency id="Kooboo.Core" version="4.4.1.318" />
     </dependencies>
   </metadata>
 </package>
