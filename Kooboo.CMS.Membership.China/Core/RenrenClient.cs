@@ -50,9 +50,9 @@ namespace Kooboo.CMS.Membership.China.Core
 
             var dictionary = new Dictionary<string, string>();
             dictionary.AddItemIfNotEmpty("id", graphData["response"]["id"].ToString() as string);
-            dictionary.AddItemIfNotEmpty("username", graphData["response"]["name"] as string);
+            dictionary.AddItemIfNotEmpty("username", graphData["response"]["id"] as string);
             dictionary.AddItemIfNotEmpty("name", graphData["response"]["name"] as string);
-            //dictionary.AddItemIfNotEmpty("url", graphData["response"]["avatar"][1]["url"] as string);
+            dictionary.AddItemIfNotEmpty("url", graphData["response"]["avatar"][1]["url"] as string);
             return dictionary;
         }
 

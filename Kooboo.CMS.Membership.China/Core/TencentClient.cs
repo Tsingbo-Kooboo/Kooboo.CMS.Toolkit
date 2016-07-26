@@ -66,7 +66,7 @@ namespace Kooboo.CMS.Membership.China.Core
 
             var dictionary = new Dictionary<string, string>();
             dictionary.AddItemIfNotEmpty("id", openid);
-            dictionary.AddItemIfNotEmpty("username", graphData.NickName);
+            dictionary.AddItemIfNotEmpty("username", openid);
             dictionary.AddItemIfNotEmpty("name", graphData.NickName);
             dictionary.AddItemIfNotEmpty("msg", graphData.Msg);
             dictionary.AddItemIfNotEmpty("gender", graphData.Gender);

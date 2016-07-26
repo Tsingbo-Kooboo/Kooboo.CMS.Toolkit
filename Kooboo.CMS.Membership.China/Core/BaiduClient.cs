@@ -52,7 +52,7 @@ namespace Kooboo.CMS.Membership.China.Core
 
             var dictionary = new Dictionary<string, string>();
             dictionary.AddItemIfNotEmpty("id", result["uid"] as string);
-            dictionary.AddItemIfNotEmpty("username", result["uname"] as string);
+            dictionary.AddItemIfNotEmpty("username", result["uid"] as string);
             dictionary.AddItemIfNotEmpty("name", result["uname"] as string);
             return dictionary;
         }

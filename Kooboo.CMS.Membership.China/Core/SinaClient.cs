@@ -60,8 +60,8 @@ namespace Kooboo.CMS.Membership.China.Core
             var graphData = JsonHelper.Deserialize<SinaGraphData>(result);
             var dictionary = new Dictionary<string, string>();
             dictionary.AddItemIfNotEmpty("id", graphData.Id);
-            dictionary.AddItemIfNotEmpty("username", graphData.Screen_Name);
-            dictionary.AddItemIfNotEmpty("name", graphData.Name);
+            dictionary.AddItemIfNotEmpty("username", graphData.Id);
+            dictionary.AddItemIfNotEmpty("name", graphData.Screen_Name);
             //foreach (var item in res)
             //{
             //    dictionary.AddItemIfNotEmpty(item.Key as string, item.Value.ToString() as string);

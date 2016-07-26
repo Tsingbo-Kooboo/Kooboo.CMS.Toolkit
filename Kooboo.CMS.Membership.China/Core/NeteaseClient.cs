@@ -53,10 +53,10 @@ namespace Kooboo.CMS.Membership.China.Core
 
             var dictionary = new Dictionary<string, string>();
             dictionary.AddItemIfNotEmpty("id", graphData.Id);
-            dictionary.AddItemIfNotEmpty("username", graphData.Name);
+            dictionary.AddItemIfNotEmpty("username", graphData.Id);
             dictionary.AddItemIfNotEmpty("name", graphData.Screen_Name);
-            //dictionary.AddItemIfNotEmpty("url", graphData.Url);
-            //dictionary.AddItemIfNotEmpty("gender", graphData.Gender.ToString());
+            dictionary.AddItemIfNotEmpty("url", graphData.Url);
+            dictionary.AddItemIfNotEmpty("gender", graphData.Gender.ToString());
             return dictionary;
         }
 
