@@ -14,9 +14,13 @@ namespace Kooboo.CMS.Toolkit.Controls
         {
             ControlHelper.RegisterControl(new DateTime());
             ControlHelper.RegisterControl(new MemberSelector());
+            ControlHelper.RegisterControl(new MembersSelector());
             ControlHelper.RegisterControl(new PageSelector());
+            ControlHelper.RegisterControl(new PagesSelector());
             ControlHelper.RegisterControl(new ViewSelector());
+            ControlHelper.RegisterControl(new ViewsSelector());
             ControlHelper.RegisterControl(new HtmlBlockSelector());
+            ControlHelper.RegisterControl(new HtmlBlocksSelector());
             ControlHelper.RegisterControl(new MediaImage());
             ControlHelper.RegisterControl(new MediaImages());
             ControlHelper.RegisterControl(new MediaPdf());

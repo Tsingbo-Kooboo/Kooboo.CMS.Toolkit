@@ -29,31 +29,28 @@ namespace Kooboo.CMS.Toolkit.Controls
 
         protected override string RenderInput(IColumn column)
         {
-            StringBuilder sb = new StringBuilder(string.Format(@"@{{ var dropDownDefault_{0} =  @""{1}"";}}
-                <select name=""{0}"" class=""long"">", column.Name, column.DefaultValue.EscapeQuote()));
-            string emptyOption = "";
-            if (column.AllowNull)
-            {
-                emptyOption = @"<option value=""""></option>";
-            }
-            //var manager = EngineContext.Current.Resolve<Kooboo.CMS.Membership.Services.MembershipUserManager>();
-            //manager.All()
-            
-            sb.AppendFormat(@"
-            @{{
-                var membership = Site.Current.GetMembership();
-                var manager = Kooboo.CMS.Common.Runtime.EngineContext.Current.Resolve<Kooboo.CMS.Membership.Services.MembershipUserManager>();
-                var query_{0} = manager.All(membership, """");
+            var inputBuilder = new StringBuilder();
+            inputBuilder.AppendFormat(@"
+            @{{ var dropDownDefault_{0} =  @""{1}"";
+                var membership{0} = Site.Current.GetMembership();
+                var manager{0} = Kooboo.CMS.Common.Runtime.EngineContext.Current.Resolve<Kooboo.CMS.Membership.Services.MembershipUserManager>();
+                var query_{0} = manager{0}.All(membership{0}, """");
+                string {0}Value = Model.{0};
+                var list{0} = query_{0}.ToArray().Select(it => new System.Web.Mvc.SelectListItem
+                {{
+                    Value = it.UUID,
+                    Text = it.UserName,
+                    Selected = {0}Value != null && {0}Value.ToString().Split(',').Contains(it.UUID,StringComparer.OrdinalIgnoreCase)
+                }});
             }}
-            {1}
-            @foreach (var item in query_{0})
-            {{                            
-                <option value=""@item.UUID"" @((Model.{0} != null && Model.{0}.ToString().ToLower() == @item.UUID.ToLower()) || (Model.{0} == null && dropDownDefault_{0}.ToLower() == @item.UUID.ToLower()) ? ""selected"" : """")>@item.UserName</option>
-            }}
-            ", column.Name,  emptyOption);
-            sb.Append("</select>");
-
-            return sb.ToString();
+            @Html.DropDownList(""{0}"", list{0}, new {{ @class = ""long select2""}})
+            <script>
+                $(function () {{
+                    $(""#{0}"").select2();
+                }});
+            </script>
+", column.Name, column.DefaultValue.EscapeQuote());
+            return inputBuilder.ToString();
         }
     }
 }

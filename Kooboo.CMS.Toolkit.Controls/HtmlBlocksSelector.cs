@@ -8,13 +8,13 @@ using Kooboo.CMS.Form.Html;
 
 namespace Kooboo.CMS.Toolkit.Controls
 {
-    public class PageSelector : Form.Html.Controls.DropDownList
+    public class HtmlBlocksSelector : Form.Html.Controls.DropDownList
     {
         public override string Name
         {
             get
             {
-                return "PageSelector";
+                return "HtmlBlocksSelector";
             }
         }
 
@@ -31,16 +31,16 @@ namespace Kooboo.CMS.Toolkit.Controls
             var inputBuilder = new StringBuilder();
             inputBuilder.AppendFormat(@"
             @{{ var dropDownDefault_{0} =  @""{1}"";
-                var query_{0} = ServiceFactory.PageManager.AllPagesFlattened(Site.Current);
+                var query_{0} = ServiceFactory.HtmlBlockManager.All(Site.Current,"""");
                 string {0}Value = Model.{0};
                 var list{0} = query_{0}.ToArray().Select(it => new System.Web.Mvc.SelectListItem
                 {{
                     Value = it.UUID,
-                    Text = it.FriendlyName,
+                    Text = it.Name,
                     Selected = {0}Value != null && {0}Value.ToString().Split(',').Contains(it.UUID,StringComparer.OrdinalIgnoreCase)
                 }});
             }}
-            @Html.DropDownList(""{0}"", list{0}, new {{ @class = ""long select2""}})
+            @Html.DropDownList(""{0}"", list{0}, new {{ @class = ""long select2"",multiple=""multiple"" }})
             <script>
                 $(function () {{
                     $(""#{0}"").select2();

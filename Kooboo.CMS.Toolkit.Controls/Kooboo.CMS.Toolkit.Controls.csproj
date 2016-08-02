@@ -128,13 +128,17 @@
     <Compile Include="ControlsInitializer.cs" />
     <Compile Include="ControlsScript.cs" />
     <Compile Include="DateTime.cs" />
+    <Compile Include="HtmlBlocksSelector.cs" />
     <Compile Include="MediaFile.cs" />
     <Compile Include="MediaFiles.cs" />
     <Compile Include="MediaImage.cs" />
     <Compile Include="MediaImages.cs" />
     <Compile Include="MediaPdf.cs" />
     <Compile Include="HtmlBlockSelector.cs" />
+    <Compile Include="MembersSelector.cs" />
     <Compile Include="MemberSelector.cs" />
+    <Compile Include="PagesSelector.cs" />
+    <Compile Include="ViewsSelector.cs" />
     <Compile Include="ViewSelector.cs" />
     <Compile Include="PageSelector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
