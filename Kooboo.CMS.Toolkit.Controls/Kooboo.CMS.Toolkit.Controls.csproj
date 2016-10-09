@@ -123,6 +123,8 @@
     <Compile Include="..\CMSAssemblyInfoGlobal.cs">
       <Link>CMSAssemblyInfoGlobal.cs</Link>
     </Compile>
+    <Compile Include="RoleSelector.cs" />
+    <Compile Include="UserSelector.cs" />
     <Compile Include="CascadingDropdown.cs" />
     <Compile Include="Controllers\CascadingController.cs" />
     <Compile Include="ControlsInitializer.cs" />
