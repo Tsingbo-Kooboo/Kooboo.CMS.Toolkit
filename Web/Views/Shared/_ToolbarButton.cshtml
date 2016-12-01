@@ -1,0 +1,34 @@
+﻿@model Kooboo.CMS.Sites.Extension.UI.TopToolbar.ToolbarButton
+@{
+    var routeValues = ViewContext.RequestContext.AllRouteValues().Merge("return", ViewContext.HttpContext.Request.RawUrl);
+    IDictionary<string, object> htmlAttributes = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+    if (Model.CommandTarget!=null)
+    {
+        if (!string.IsNullOrEmpty(Model.CommandTarget.Area))
+        {
+            routeValues = routeValues.Merge("area", Model.CommandTarget.Area);
+        }
+        if (!string.IsNullOrEmpty(Model.CommandTarget.Controller))
+        {
+            routeValues = routeValues.Merge("controller", Model.CommandTarget.Controller);
+        }
+        if (Model.CommandTarget.RouteValues != null)
+        {
+            routeValues = routeValues.Merge(new RouteValueDictionary(Model.CommandTarget.RouteValues));
+        }
+        htmlAttributes["href"] = Url.Action(Model.CommandTarget.Action, routeValues);
+    }
+    if (Model.HtmlAttributes != null)
+    {
+        htmlAttributes = htmlAttributes.Merge(Model.HtmlAttributes);// Html.GenerateHtmlAttributes(Model.HtmlAttributes);
+    }
+}
+<li>
+    <a @Html.GenerateHtmlAttributes(htmlAttributes)>
+        @if (!string.IsNullOrEmpty(Model.IconClass))
+        {
+            @Html.IconImage(Model.IconClass)
+        }
+        @(Model.CommandText.Localize())
+    </a>
+</li>

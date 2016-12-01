@@ -1,0 +1,21 @@
+﻿@model Kooboo.CMS.Sites.Services.Namespace<HtmlBlock>
+@{
+    Layout = "Design.cshtml";
+}
+@section HeadContent{
+    <script type="text/javascript">
+        function getDesignerType(types) { return types['htmlBlock']; }
+    </script>
+}
+
+<h1 class="title">@("HTML block:".Localize())</h1>
+<div class="block treeview">
+    <ul id="J_DataTree">
+        @(Html.Partial("HtmlBlockNamespace", Model))
+    </ul>
+</div>
+<script>
+    $(function () {
+        $('#J_DataTree li.tree-node').treeNode();
+    })
+</script>
