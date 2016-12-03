@@ -10,6 +10,11 @@ using System.Web.WebPages;
 using System.Web.Mvc.Filters;
 using System.Web.Mvc.Routing;
 using System.Web.Mvc.Ajax;
+using Kooboo.Web.Script.Serialization;
+using Newtonsoft.Json;
+using Kooboo.CMS.Toolkit.Controls.RichTextEditors.Services;
+using Kooboo.CMS.Content.Models;
+using Kooboo.CMS.Common.Persistence.Non_Relational;
 
 namespace Kooboo.CMS.Web.Areas.Contents.Controllers
 {
@@ -17,6 +22,13 @@ namespace Kooboo.CMS.Web.Areas.Contents.Controllers
     [AllowAnonymous]
     public class UEditorController : Controller
     {
+        private readonly IMediaService _mediaService;
+
+        public UEditorController(IMediaService mediaService)
+        {
+            _mediaService = mediaService;
+        }
+
         public enum RequestAction
         {
             unknown,
@@ -38,33 +50,42 @@ namespace Kooboo.CMS.Web.Areas.Contents.Controllers
         }
 
         [AllowAnonymous]
-        //[Authorization(AreaName = "Contents", Group = "", Name = "Content", Order = 99)]
-        [HttpGet]
-        public ActionResult Browser()
+        public ActionResult Browser(string repositoryName,
+            string siteName,
+            string folderName = "upload",
+            int start = 0,
+            int size = 20,
+            string[] source = null)
         {
-            return Content(Kooboo.Web.Script.Serialization.JsonHelper.ToJSON(new UEditorConfig()), "application/json");
             var actionString = Request.QueryString.Get("action");
             RequestAction action;
             if (Enum.TryParse(actionString, out action))
             {
+                var repository = new Repository(repositoryName).AsActual();
+                var folder = new MediaFolder(repository, folderName);
+                var config = _mediaService.GetConfig(repositoryName, siteName, folderName);
                 switch (action)
                 {
                     case RequestAction.config:
-                        return Json(new UEditorConfig(), JsonRequestBehavior.AllowGet);
-                    case RequestAction.uploadimage:
-                        break;
+                        return Content(JsonConvert.SerializeObject(config), "application/json");
                     case RequestAction.uploadscrawl:
-                        break;
+                    case RequestAction.uploadimage:
                     case RequestAction.uploadvideo:
-                        break;
                     case RequestAction.uploadfile:
+                        var file = Request.Files["upfile"];
+                        if (file != null)
+                        {
+                            var uploadResult = _mediaService.Upload(repository, siteName, folder, file.FileName, file.InputStream);
+                            return Content(JsonConvert.SerializeObject(uploadResult), "application/json");
+                        }
                         break;
                     case RequestAction.listimage:
-                        break;
                     case RequestAction.listfile:
-                        break;
+                        var data = _mediaService.GetList(repositoryName, siteName, folderName, "", start, size);
+                        return Content(JsonConvert.SerializeObject(data), "application/json");
                     case RequestAction.catchimage:
-                        break;
+                        var catchResult = _mediaService.Crawler(repository, siteName, folder, source, config.CatcherPathFormat);
+                        return Content(JsonConvert.SerializeObject(catchResult), "application/json");
                     default:
                         break;
                 }

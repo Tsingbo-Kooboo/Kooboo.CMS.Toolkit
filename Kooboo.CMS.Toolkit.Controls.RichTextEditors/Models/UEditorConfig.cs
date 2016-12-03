@@ -1,120 +1,122 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Kooboo.CMS.Toolkit.Controls.RichTextEditors.Models
 {
+    [DataContract]
     public class UEditorConfig
     {
         #region --- 上传图片配置项 ---
-        [JsonProperty("imageActionName")]
+        [DataMember(Name ="imageActionName")]
+        
         public string ImageActionName { get; set; } = "uploadimage";
 
-        [JsonProperty("imageFieldName")]
+        [DataMember(Name ="imageFieldName")]
         public string ImageFieldName { get; set; } = "upfile";
 
-        [JsonProperty("imageMaxSize")]
+        [DataMember(Name ="imageMaxSize")]
         public int ImageMaxSize { get; set; } = 2048000;
-        [JsonProperty("imageAllowFiles")]
+        [DataMember(Name ="imageAllowFiles")]
         public List<string> ImageAllowFiles { get; set; } = new List<string> { ".png", ".jpg", ".jpeg", ".gif", ".bmp" };
 
-        [JsonProperty("imageCompressEnable")]
+        [DataMember(Name ="imageCompressEnable")]
         public bool ImageCompressEnable { get; set; } = true;
 
-        [JsonProperty("imageCompressBorder")]
+        [DataMember(Name ="imageCompressBorder")]
         public int ImageCompressBorder { get; set; } = 1600;
 
-        [JsonProperty("imageInsertAlign")]
+        [DataMember(Name ="imageInsertAlign")]
         public string ImageInsertAlign { get; set; } = "none";
 
-        [JsonProperty("imageUrlPrefix")]
-        public string ImageUrlPrefix { get; set; } = "/ueditor/net/";
+        [DataMember(Name ="imageUrlPrefix")]
+        public string ImageUrlPrefix { get; set; } = "";
 
-        [JsonProperty("imagePathFormat")]
-        public string ImagePathFormat { get; set; } = "upload/image/{yyyy}{mm}{dd}/{time}{rand:6}";
+        [DataMember(Name ="imagePathFormat")]
+        public string ImagePathFormat { get; set; } = "{yyyy}{mm}{dd}-{hh}{ii}{ss}-{rand:3}";
         #endregion
 
         #region --- 涂鸦图片上传配置项 ---
-        [JsonProperty("scrawlActionName")]
+        [DataMember(Name ="scrawlActionName")]
         public string ScrawlActionName { get; set; } = "uploadscrawl";
 
-        [JsonProperty("scrawlFieldName")]
+        [DataMember(Name ="scrawlFieldName")]
         public string ScrawlFieldName { get; set; } = "upfile";
 
-        [JsonProperty("scrawlPathFormat")]
-        public string ScrawlPathFormat { get; set; } = "upload/image/{yyyy}{mm}{dd}/{time}{rand:6}";
+        [DataMember(Name ="scrawlPathFormat")]
+        public string ScrawlPathFormat { get; set; } = "{yyyy}{mm}{dd}-{hh}{ii}{ss}-{rand:3}";
 
-        [JsonProperty("scrawlMaxSize")]
+        [DataMember(Name ="scrawlMaxSize")]
         public int ScrawlMaxSize { get; set; } = 2048000;
 
-        [JsonProperty("scrawlUrlPrefix")]
-        public string ScrawlUrlPrefix { get; set; } = "/ueditor/net/";
+        [DataMember(Name ="scrawlUrlPrefix")]
+        public string ScrawlUrlPrefix { get; set; } = "";
 
-        [JsonProperty("scrawlInsertAlign")]
+        [DataMember(Name ="scrawlInsertAlign")]
         public string ScrawlInsertAlign { get; set; } = "none";
         #endregion
 
         #region --- 截图工具上传 ---
-        [JsonProperty("snapscreenActionName")]
+        [DataMember(Name ="snapscreenActionName")]
         public string SnapscreenActionName { get; set; } = "uploadimage";
-        [JsonProperty("snapscreenPathFormat")]
-        public string SnapscreenPathFormat { get; set; } = "upload/image/{yyyy}{mm}{dd}/{time}{rand:6}";
-        [JsonProperty("snapscreenUrlPrefix")]
-        public string SnapscreenUrlPrefix { get; set; } = "/ueditor/net/";
-        [JsonProperty("snapscreenInsertAlign")]
+        [DataMember(Name ="snapscreenPathFormat")]
+        public string SnapscreenPathFormat { get; set; } = "{yyyy}{mm}{dd}-{hh}{ii}{ss}-{rand:3}";
+        [DataMember(Name ="snapscreenUrlPrefix")]
+        public string SnapscreenUrlPrefix { get; set; } = "";
+        [DataMember(Name ="snapscreenInsertAlign")]
         public string SnapscreenInsertAlign { get; set; } = "none";
         #endregion
 
         #region --- 抓取远程图片配置 ---
-        [JsonProperty("catcherLocalDomain")]
-        public List<string> CatcherLocalDomain { get; set; } = new List<string> { "127.0.0.1", "localhost", "img.baidu.com" };
-        [JsonProperty("catcherActionName")]
+        [DataMember(Name ="catcherLocalDomain")]
+        public List<string> CatcherLocalDomain { get; set; } = new List<string> { "127.0.0.1", "localhost"};
+        [DataMember(Name ="catcherActionName")]
         public string CatcherActionName { get; set; } = "catchimage";
 
-        [JsonProperty("catcherFieldName")]
+        [DataMember(Name ="catcherFieldName")]
         public string CatcherFieldName { get; set; } = "source";
-        [JsonProperty("catcherPathFormat")]
-        public string CatcherPathFormat { get; set; } = "upload/image/{yyyy}{mm}{dd}/{time}{rand:6}";
+        [DataMember(Name ="catcherPathFormat")]
+        public string CatcherPathFormat { get; set; } = "{yyyy}{mm}{dd}-{hh}{ii}{ss}-{rand:3}";
 
-        [JsonProperty("catcherUrlPrefix")]
-        public string CatcherUrlPrefix { get; set; } = "/ueditor/net/";
-        [JsonProperty("catcherMaxSize")]
+        [DataMember(Name ="catcherUrlPrefix")]
+        public string CatcherUrlPrefix { get; set; } = "";
+        [DataMember(Name ="catcherMaxSize")]
         public int CatcherMaxSize { get; set; } = 2048000;
-        [JsonProperty("catcherAllowFiles")]
+        [DataMember(Name ="catcherAllowFiles")]
         public List<string> CatcherAllowFiles { get; set; } = new List<string> { ".png", ".jpg", ".jpeg", ".gif", ".bmp" };
         #endregion
 
         #region --- 上传视频配置 ---
-        [JsonProperty("videoActionName")]
+        [DataMember(Name ="videoActionName")]
         public string VideoActionName { get; set; } = "uploadvideo";
-        [JsonProperty("videoFieldName")]
+        [DataMember(Name ="videoFieldName")]
         public string VideoFieldName { get; set; } = "upfile";
-        [JsonProperty("videoPathFormat")]
-        public string VideoPathFormat { get; set; } = "upload/video/{yyyy}{mm}{dd}/{time}{rand:6}";
-        [JsonProperty("videoUrlPrefix")]
-        public string VideoUrlPrefix { get; set; } = "/ueditor/net/";
-        [JsonProperty("videoMaxSize")]
+        [DataMember(Name ="videoPathFormat")]
+        public string VideoPathFormat { get; set; } = "upload/video/{yyyy}{mm}{dd}-{time}{rand:6}";
+        [DataMember(Name ="videoUrlPrefix")]
+        public string VideoUrlPrefix { get; set; } = "";
+        [DataMember(Name ="videoMaxSize")]
         public int VideoMaxSize { get; set; } = 102400000;
-        [JsonProperty("videoAllowFiles")]
+        [DataMember(Name ="videoAllowFiles")]
         public List<string> VideoAllowFiles { get; set; } = new List<string> {".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
         ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid" };
         #endregion
 
         #region --- 上传文件配置 ---
-        [JsonProperty("fileActionName")]
+        [DataMember(Name ="fileActionName")]
         public string FileActionName { get; set; } = "uploadfile";
-        [JsonProperty("fileFieldName")]
+        [DataMember(Name ="fileFieldName")]
         public string FileFieldName { get; set; } = "upfile";
-        [JsonProperty("filePathFormat")]
-        public string FilePathFormat { get; set; } = "upload/file/{yyyy}{mm}{dd}/{time}{rand:6}";
-        [JsonProperty("fileUrlPrefix")]
-        public string FileUrlPrefix { get; set; } = "/ueditor/net/";
-        [JsonProperty("fileMaxSize")]
+        [DataMember(Name ="filePathFormat")]
+        public string FilePathFormat { get; set; } = "upload/file/{yyyy}{mm}{dd}-{time}{rand:6}";
+        [DataMember(Name ="fileUrlPrefix")]
+        public string FileUrlPrefix { get; set; } = "";
+        [DataMember(Name ="fileMaxSize")]
         public int FileMaxSize { get; set; } = 51200000;
-        [JsonProperty("fileAllowFiles")]
+        [DataMember(Name ="fileAllowFiles")]
         public List<string> FileAllowFiles { get; set; } = new List<string>
         {
              ".png", ".jpg", ".jpeg", ".gif", ".bmp",
@@ -126,30 +128,30 @@ namespace Kooboo.CMS.Toolkit.Controls.RichTextEditors.Models
         #endregion
 
         #region --- 列出指定目录下的图片 ---
-        [JsonProperty("imageManagerActionName")]
+        [DataMember(Name ="imageManagerActionName")]
         public string ImageManagerActionName { get; set; } = "listimage";
-        [JsonProperty("imageManagerListPath")]
+        [DataMember(Name ="imageManagerListPath")]
         public string ImageManagerListPath { get; set; } = "upload/image";
-        [JsonProperty("imageManagerListSize")]
+        [DataMember(Name ="imageManagerListSize")]
         public int ImageManagerListSize { get; set; } = 20;
-        [JsonProperty("imageManagerUrlPrefix")]
-        public string ImageManagerUrlPrefix { get; set; } = "/ueditor/net/";
-        [JsonProperty("imageManagerInsertAlign")]
+        [DataMember(Name ="imageManagerUrlPrefix")]
+        public string ImageManagerUrlPrefix { get; set; } = "";
+        [DataMember(Name ="imageManagerInsertAlign")]
         public string ImageManagerInsertAlign { get; set; } = "none";
-        [JsonProperty("imageManagerAllowFiles")]
+        [DataMember(Name ="imageManagerAllowFiles")]
         public List<string> ImageManagerAllowFiles { get; set; } = new List<string> { ".png", ".jpg", ".jpeg", ".gif", ".bmp" };
         #endregion
 
         #region --- 列出指定目录下的文件 ---
-        [JsonProperty("fileManagerActionName")]
+        [DataMember(Name ="fileManagerActionName")]
         public string FileManagerActionName { get; set; } = "listfile";
-        [JsonProperty("fileManagerListPath")]
+        [DataMember(Name ="fileManagerListPath")]
         public string FileManagerListPath { get; set; } = "upload/file";
-        [JsonProperty("fileManagerUrlPrefix")]
-        public string FileManagerUrlPrefix { get; set; } = "/ueditor/net/";
-        [JsonProperty("fileManagerListSize")]
+        [DataMember(Name ="fileManagerUrlPrefix")]
+        public string FileManagerUrlPrefix { get; set; } = "";
+        [DataMember(Name ="fileManagerListSize")]
         public int FileManagerListSize { get; set; } = 20;
-        [JsonProperty("fileManagerAllowFiles")]
+        [DataMember(Name ="fileManagerAllowFiles")]
         public List<string> FileManagerAllowFiles { get; set; } = new List<string> { ".png", ".jpg", ".jpeg", ".gif", ".bmp",
         ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
         ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid",
