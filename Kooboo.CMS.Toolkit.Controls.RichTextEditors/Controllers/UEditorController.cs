@@ -15,12 +15,13 @@ using Newtonsoft.Json;
 using Kooboo.CMS.Toolkit.Controls.RichTextEditors.Services;
 using Kooboo.CMS.Content.Models;
 using Kooboo.CMS.Common.Persistence.Non_Relational;
+using System.IO;
 
 namespace Kooboo.CMS.Web.Areas.Contents.Controllers
 {
-    //[LargeFileAuthorization(AreaName = "Contents", Group = "", Name = "Content", Order = 1)]
-    [AllowAnonymous]
-    public class UEditorController : Controller
+    [LargeFileAuthorization(AreaName = "Contents", Group = "", Name = "Content", Order = 1)]
+    //[AllowAnonymous]
+    public class UEditorController : ContentControllerBase
     {
         private readonly IMediaService _mediaService;
 
@@ -49,7 +50,7 @@ namespace Kooboo.CMS.Web.Areas.Contents.Controllers
             public long noCache { get; set; }
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public ActionResult Browser(string repositoryName,
             string siteName,
             string folderName = "upload",
@@ -69,10 +70,18 @@ namespace Kooboo.CMS.Web.Areas.Contents.Controllers
                     case RequestAction.config:
                         return Content(JsonConvert.SerializeObject(config), "application/json");
                     case RequestAction.uploadscrawl:
+                        var base64String = Request.Form[config.ScrawlFieldName];
+                        var bytes = Convert.FromBase64String(base64String);
+                        using (var stream = new MemoryStream(bytes))
+                        {
+                            var fileName = PathFormatter.Format("temp.png", config.ScrawlPathFormat);
+                            var uploadResult = _mediaService.Upload(repository, siteName, folder, fileName, stream);
+                            return Content(JsonConvert.SerializeObject(uploadResult), "application/json");
+                        }
                     case RequestAction.uploadimage:
                     case RequestAction.uploadvideo:
                     case RequestAction.uploadfile:
-                        var file = Request.Files["upfile"];
+                        var file = Request.Files[config.ImageFieldName];
                         if (file != null)
                         {
                             var uploadResult = _mediaService.Upload(repository, siteName, folder, file.FileName, file.InputStream);
@@ -92,6 +101,17 @@ namespace Kooboo.CMS.Web.Areas.Contents.Controllers
             }
 
             return Content("Hello " + action);
+        }
+
+        public ActionResult Search(string repositoryName,
+            string siteName,
+            string folderName = "upload",
+            int start = 0,
+            int size = 20,
+            string[] source = null)
+        {
+
+            return null;
         }
     }
 }

@@ -235,3 +235,7 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+*/Cms_Data/Caching/*
+*/Cms_Data/Contents/*/Search/Index/
+*/Cms_Data/Versions/*
