@@ -340,8 +340,63 @@
     <Content Include="Areas\Contents\Scripts\ueditor\themes\default\images\word.gif" />
     <Content Include="Areas\Contents\Scripts\ueditor\themes\default\images\wordpaste.png" />
     <Content Include="Areas\Contents\Scripts\ueditor\themes\iframe.css" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\adapters\standalone-framework.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\highcharts-more.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\highcharts-more.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\highcharts.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\highcharts.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\annotations.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\annotations.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\canvas-tools.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\data.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\data.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\drilldown.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\drilldown.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\exporting.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\exporting.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\funnel.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\funnel.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\heatmap.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\heatmap.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\map.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\map.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\no-data-to-display.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\themes\dark-blue.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\themes\dark-green.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\themes\gray.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\themes\grid.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\highcharts\themes\skies.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\video-js\font\vjs.svg" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\video-js\video-js.css" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\video-js\video-js.min.css" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\video-js\video-js.swf" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\video-js\video.dev.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\video-js\video.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\webuploader\Uploader.swf" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\webuploader\webuploader.css" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\webuploader\webuploader.custom.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\webuploader\webuploader.custom.min.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\webuploader\webuploader.flashonly.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\webuploader\webuploader.html5only.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\webuploader\webuploader.html5only.min.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\webuploader\webuploader.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\webuploader\webuploader.min.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\webuploader\webuploader.withoutimage.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\webuploader\webuploader.withoutimage.min.js" />
     <Content Include="Areas\Contents\Scripts\ueditor\third-party\zeroclipboard\ZeroClipboard.js" />
     <Content Include="Areas\Contents\Scripts\ueditor\third-party\zeroclipboard\ZeroClipboard.min.js" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\zeroclipboard\ZeroClipboard.min.map" />
     <Content Include="Areas\Contents\Scripts\ueditor\third-party\zeroclipboard\ZeroClipboard.swf" />
     <Content Include="Areas\Contents\Scripts\ueditor\ueditor.all.js" />
     <Content Include="Areas\Contents\Scripts\ueditor\ueditor.all.min.js" />
@@ -1711,7 +1766,11 @@
       <Name>Kooboo.CMS.Toolkit.Controls.RichTextEditors</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\video-js\font\vjs.eot" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\video-js\font\vjs.ttf" />
+    <Content Include="Areas\Contents\Scripts\ueditor\third-party\video-js\font\vjs.woff" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\NotFound\Index.cshtml" />
     <Content Include="Views\Shared\Blank.cshtml" />
@@ -2126,9 +2185,6 @@
     <Content Include="Areas\Sites\Views\View\_Grid2.cshtml" />
     <Content Include="Areas\Sites\Views\Web.config" />
     <Content Include="Areas\Sites\WebResources.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\Contents\Scripts\ueditor\third-party\zeroclipboard\ZeroClipboard.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -14,6 +14,7 @@ var paths = {
     minJs: webroot + "Areas/Contents/Scripts/ueditor/**/*.min.js",
     css: webroot + "Areas/Contents/Scripts/ueditor/**/*.css",
     minCss: webroot + "Areas/Contents/Scripts/ueditor/**/*.min.css",
+    staticFiles: webroot + "Areas/Contents/Scripts/ueditor/**/*.{swf,htm,html,png,jpg,gif,min.js}",
     concatJsDest: "./Publish/Release/ueditor/ueditor.min.js",
     concatCssDest: "./Publish/Release/ueditor/ueditor.min.css",
     outputDir:"./Publish/Release/ueditor/"
@@ -43,4 +44,7 @@ gulp.task("min:css", function () {
         .pipe(gulp.dest(paths.outputDir));
 });
 
-gulp.task("min", ["min:js", "min:css"]);
+gulp.task("min", ["min:js", "min:css"], function () {
+    return gulp.src([paths.staticFiles])
+    .pipe(gulp.dest(paths.outputDir));
+});

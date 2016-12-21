@@ -19,7 +19,7 @@
      * 因此，UEditor提供了针对不同页面的编辑器可单独配置的根路径，具体来说，在需要实例化编辑器的页面最顶部写上如下代码即可。当然，需要令此处的URL等于对应的配置。
      * window.UEDITOR_HOME_URL = "/xxxx/xxxx/";
      */
-    window.UEDITOR_HOME_URL = "/Areas/Contents/Scripts/ueditor/";
+    window.UEDITOR_HOME_URL = window.UEDITOR_HOME_URL || "/Areas/Contents/Scripts/ueditor/";
 
     var URL = window.UEDITOR_HOME_URL || getUEBasePath();
     var currentUrl = window.location.href;
@@ -57,12 +57,12 @@
         //语言配置项,默认是zh-cn。有需要的话也可以使用如下这样的方式来自动多语言切换，当然，前提条件是lang文件夹下存在对应的语言文件：
         //lang值也可以通过自动获取 (navigator.language||navigator.browserLanguage ||navigator.userLanguage).toLowerCase()
         //,lang:"zh-cn"
-        , langPath: "/Areas/Contents/Scripts/ueditor/lang/"
+        , langPath: URL + "lang/"
 
         //主题配置项,默认是default。有需要的话也可以使用如下这样的方式来自动多主题切换，当然，前提条件是themes文件夹下存在对应的主题文件：
         //现有如下皮肤:default
         //,theme:'default'
-        , themePath: "/Areas/Contents/Scripts/ueditor/themes/"
+        , themePath: URL + "themes/"
 
         //,zIndex : 900     //编辑器层级的基数,默认是900
 
@@ -86,7 +86,7 @@
         //如果自定义，最好给p标签如下的行高，要不输入中文时，会有跳动感
         //,initialStyle:'p{line-height:1em}'//编辑器层级的基数,可以用来改变字体等
 
-        , iframeCssUrl: '/Areas/Contents/Scripts/ueditor/themes/iframe.css' //给编辑区域的iframe引入一个css文件
+        , iframeCssUrl: URL + 'themes/iframe.css' //给编辑区域的iframe引入一个css文件
 
         //indentValue
         //首行缩进距离,默认是2em
