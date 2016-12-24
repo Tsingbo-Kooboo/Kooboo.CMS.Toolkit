@@ -25,6 +25,12 @@ namespace Kooboo.CMS.Toolkit.Controls.RichTextEditors.UI
                         Action="Edit",
                         Controller="TextContent",
                         Area="Contents"
+                    },
+                    new MvcRoute
+                    {
+                        Action="Create",
+                        Controller="TextContent",
+                        Area="Contents"
                     }
                 };
             }

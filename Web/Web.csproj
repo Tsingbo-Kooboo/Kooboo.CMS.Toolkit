@@ -517,10 +517,6 @@
     <Content Include="Areas\Sites\Styles\images\map-item-hover.png" />
     <Content Include="Areas\Sites\Styles\images\map-item.png" />
     <Content Include="Areas\Sites\Styles\sites.css" />
-    <Content Include="Content\video-js.css" />
-    <Content Include="Content\video-js.min.css" />
-    <Content Include="Content\video-js.swf" />
-    <Content Include="fonts\vjs.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\Default.png" />
     <Content Include="Images\favicon.ico" />
@@ -1706,19 +1702,6 @@
     <Content Include="Scripts\ueditor\ueditor.all.js" />
     <Content Include="Scripts\ueditor\ueditor.config.js" />
     <Content Include="Scripts\underscore.js" />
-    <Content Include="Scripts\video.dev.js" />
-    <Content Include="Scripts\video.js" />
-    <Content Include="Scripts\vjs-lang\de.js" />
-    <Content Include="Scripts\vjs-lang\es.js" />
-    <Content Include="Scripts\vjs-lang\fr.js" />
-    <Content Include="Scripts\vjs-lang\it.js" />
-    <Content Include="Scripts\vjs-lang\ja.js" />
-    <Content Include="Scripts\vjs-lang\ko.js" />
-    <Content Include="Scripts\vjs-lang\nl.js" />
-    <Content Include="Scripts\vjs-lang\pt-BR.js" />
-    <Content Include="Scripts\vjs-lang\ru.js" />
-    <Content Include="Scripts\vjs-lang\uk.js" />
-    <Content Include="Scripts\vjs-lang\zh.js" />
     <Content Include="Scripts\yardiTip\ellipsis.xml" />
     <Content Include="Scripts\yardiTip\images\arrow_down.png" />
     <Content Include="Scripts\yardiTip\images\arrow_top.png" />
@@ -2184,18 +2167,6 @@
     <Content Include="Areas\Sites\Views\View\_Grid2.cshtml" />
     <Content Include="Areas\Sites\Views\Web.config" />
     <Content Include="Areas\Sites\WebResources.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\vjs.woff" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\vjs.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\vjs.eot" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\video-js.less" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\Master.Style.cshtml" />

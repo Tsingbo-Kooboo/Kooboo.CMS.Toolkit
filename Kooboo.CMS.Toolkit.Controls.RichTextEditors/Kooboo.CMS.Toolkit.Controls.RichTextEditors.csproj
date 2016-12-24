@@ -407,7 +407,6 @@
     <Content Include="Scripts\ueditor\ueditor.all.js" />
     <Content Include="Scripts\ueditor\ueditor.all.min.js" />
     <Content Include="Scripts\ueditor\ueditor.config.js" />
-    <Content Include="Scripts\ueditor\ueditor.parse.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

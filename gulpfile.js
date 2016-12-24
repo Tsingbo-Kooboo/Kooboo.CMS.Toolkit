@@ -1,20 +1,21 @@
 /// <binding Clean='clean' />
 "use strict";
 
-var gulp = require("gulp"),
+var path = require("path"),
+    gulp = require("gulp"),
     rimraf = require("rimraf"),
     concat = require("gulp-concat"),
     cssmin = require("gulp-cssmin"),
     uglify = require("gulp-uglify");
 
-var webroot = "./Web/";
+var webroot = "./Kooboo.CMS.Toolkit.Controls.RichTextEditors/Scripts/";
 
 var paths = {
-    js: webroot + "Areas/Contents/Scripts/ueditor/**/*.js",
-    minJs: webroot + "Areas/Contents/Scripts/ueditor/**/*.min.js",
-    css: webroot + "Areas/Contents/Scripts/ueditor/**/*.css",
-    minCss: webroot + "Areas/Contents/Scripts/ueditor/**/*.min.css",
-    staticFiles: webroot + "Areas/Contents/Scripts/ueditor/**/*.{swf,htm,html,png,jpg,gif,min.js}",
+    js: webroot + "ueditor/**/*.js",
+    minJs: webroot + "ueditor/**/*.min.js",
+    css: webroot + "ueditor/**/*.css",
+    minCss: webroot + "ueditor/**/*.min.css",
+    staticFiles: webroot + "ueditor/**/*.{swf,htm,html,png,jpg,gif,min.js}",
     concatJsDest: "./Publish/Release/ueditor/ueditor.min.js",
     concatCssDest: "./Publish/Release/ueditor/ueditor.min.css",
     outputDir:"./Publish/Release/ueditor/"
