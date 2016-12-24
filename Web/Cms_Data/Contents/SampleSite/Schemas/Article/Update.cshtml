@@ -29,9 +29,8 @@
             </th>
             <td>
             <div class="extra-large"><script name="UEditor" id="UEditor" class="0 ueditor" 
-media_library_url="@Url.Action("Selection","MediaContent",ViewContext.RequestContext.AllRouteValues()))" 
-media_library_title ="@("Selected Files".Localize())" type="text/plain">@Html.Raw(Model.UEditor ?? "")</script></div>
-<script>UE.getEditor("UEditor").addListener("contentChange", function () {$.publish(kooboo.constants.messageToptics.SomeThing_Changed_On_Page);});</script>
+ type="text/plain">@Html.Raw(Model.UEditor ?? "")</script></div>
+<script>UE.getEditor("UEditor",{}).addListener("contentChange", function () {$.publish(kooboo.constants.messageToptics.SomeThing_Changed_On_Page);});</script>
             
             @Html.ValidationMessageForColumn(((ISchema)ViewData["Schema"])["UEditor"], null)
             
@@ -51,9 +50,8 @@ media_library_title ="@("Selected Files".Localize())" type="text/plain">@Html.Ra
             </th>
             <td>
             <div class="extra-large"><script name="Description" id="Description" class="0 ueditor" 
-media_library_url="@Url.Action("Selection","MediaContent",ViewContext.RequestContext.AllRouteValues()))" 
-media_library_title ="@("Selected Files".Localize())" type="text/plain">@Html.Raw(Model.Description ?? "")</script></div>
-<script>UE.getEditor("Description").addListener("contentChange", function () {$.publish(kooboo.constants.messageToptics.SomeThing_Changed_On_Page);});</script>
+ type="text/plain">@Html.Raw(Model.Description ?? "")</script></div>
+<script>UE.getEditor("Description",{toolbars:[["fullscreen","source","undo","redo","bold"]]}).addListener("contentChange", function () {$.publish(kooboo.constants.messageToptics.SomeThing_Changed_On_Page);});</script>
             
             @Html.ValidationMessageForColumn(((ISchema)ViewData["Schema"])["Description"], null)
             
@@ -83,5 +81,5 @@ media_library_title ="@("Selected Files".Localize())" type="text/plain">@Html.Ra
             }<input class='long' id="UtcLastModificationDate" name="UtcLastModificationDate" type="hidden" value="@(Model.UtcLastModificationDate ?? "")" /><input class='long' id="UserId" name="UserId" type="hidden" value="@(Model.UserId ?? "")"  data-val-length="The field UserId must be a string with a maximum length of 36." data-val-length-max="36" data-val="true"/>
     @Html.Action("Categories", ViewContext.RequestContext.AllRouteValues())
     </table>   
-    @Html.Partial("~/Views/Shared/_TinyMCEExternalCssInjection.cshtml")
+    @Html.Partial("_TinyMCEExternalCssInjection")
 }

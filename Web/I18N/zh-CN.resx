@@ -4065,4 +4065,10 @@
   <data name="Latest modification date" xml:space="preserve">
     <value>Latest modification date</value>
   </data>
+  <data name="名称" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="The Tree style data field is required." xml:space="preserve">
+    <value>The Tree style data field is required.</value>
+  </data>
 </root>
