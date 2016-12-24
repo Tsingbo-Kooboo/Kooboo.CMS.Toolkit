@@ -1,0 +1,191 @@
+﻿[
+  {
+    "UUID": null,
+    "Name": "Sample site",
+    "Value": "Sample site",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.2180039Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Member Login",
+    "Value": "Member Login",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.4121326Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Register",
+    "Value": "Register",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.4861817Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Articles",
+    "Value": "Articles",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.4881831Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Copyright &copy; 2009 - 2013 Kooboo team",
+    "Value": "Copyright &copy; 2009 - 2013 Kooboo team",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.4901836Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Admin Login",
+    "Value": "Admin Login",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.493186Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Login",
+    "Value": "Login",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.4971894Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Username",
+    "Value": "Username",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.5011917Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Required",
+    "Value": "Required",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.5041933Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Password",
+    "Value": "Password",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.509197Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Remember me",
+    "Value": "Remember me",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.515201Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Forgot password?",
+    "Value": "Forgot password?",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.5182026Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Register a new account",
+    "Value": "Register a new account",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.5212042Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Login with social accounts",
+    "Value": "Login with social accounts",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.5242062Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "<b>Note</b>: You need to configure Fackbook or <br > Twitter settings before using them.",
+    "Value": "<b>Note</b>: You need to configure Fackbook or <br > Twitter settings before using them.",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.5272093Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Register member",
+    "Value": "Register member",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.5292099Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Email",
+    "Value": "Email",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.5322119Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Confirm password",
+    "Value": "Confirm password",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.5342132Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "'Confirm password' and 'Password' do not match.",
+    "Value": "'Confirm password' and 'Password' do not match.",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.5382155Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": null,
+    "Name": "Sign up",
+    "Value": "Sign up",
+    "Category": "",
+    "UtcCreationDate": "2016-12-01T14:22:45.5412175Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": null
+  },
+  {
+    "UUID": "6KEZZ3NVBS",
+    "Name": "Delete",
+    "Value": "Delete",
+    "Category": "",
+    "UtcCreationDate": "2016-12-04T13:29:21.9239623Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": "admin"
+  }
+]

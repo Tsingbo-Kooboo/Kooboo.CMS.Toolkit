@@ -15,6 +15,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kooboo.Toolkits.Test", "Uni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kooboo.CMS.Membership.China", "Kooboo.CMS.Membership.China\Kooboo.CMS.Membership.China.csproj", "{E078F439-9899-49A1-9A9F-A1B0687E0716}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kooboo.CMS.Toolkit.Controls.RichTextEditors", "Kooboo.CMS.Toolkit.Controls.RichTextEditors\Kooboo.CMS.Toolkit.Controls.RichTextEditors.csproj", "{65395E93-3E85-4ABB-A0C9-0BE997DD1C71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{9F95DE9C-DBD1-4133-BB9B-401C69A4D92B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C589B55-11B1-486C-9C5C-A384A9F108A4}"
+	ProjectSection(SolutionItems) = preProject
+		gulpfile.js = gulpfile.js
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +50,14 @@ Global
 		{E078F439-9899-49A1-9A9F-A1B0687E0716}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E078F439-9899-49A1-9A9F-A1B0687E0716}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E078F439-9899-49A1-9A9F-A1B0687E0716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65395E93-3E85-4ABB-A0C9-0BE997DD1C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65395E93-3E85-4ABB-A0C9-0BE997DD1C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65395E93-3E85-4ABB-A0C9-0BE997DD1C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65395E93-3E85-4ABB-A0C9-0BE997DD1C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F95DE9C-DBD1-4133-BB9B-401C69A4D92B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F95DE9C-DBD1-4133-BB9B-401C69A4D92B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F95DE9C-DBD1-4133-BB9B-401C69A4D92B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F95DE9C-DBD1-4133-BB9B-401C69A4D92B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

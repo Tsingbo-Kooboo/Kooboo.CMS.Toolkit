@@ -1,0 +1,55 @@
+﻿@using Kooboo.CMS.Sites.Extension.UI.WebResources
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="shortcut icon" href='@Url.Content("~/Images/favicon.ico")' />
+    <title>
+        @ViewBag.Title
+        @(" - Kooboo CMS".Localize())
+    </title>
+    @Html.Partial("Master.Style")
+    @RenderSection("ScriptCSS", false)
+    @foreach (var script in CustomWebResources.GetStyles(ViewContext.RequestContext))
+    {
+        @script.Body
+    }
+</head>
+<body class="loading">
+    @Html.Partial("_Loading_Info")
+    <div id="body-container">
+        <header id="header">
+            <a class="logo" href="@Html.Raw(Url.Action("SiteMap", "Home", new { area = "Sites" }))" title="@("Back to site manager".Localize())">
+                <img src="@Html.Raw(Url.Content("~/Images/logo.png"))" alt="LOGO">
+                @Html.IconImage("home")
+            </a>
+            @RenderSection("Panel", false)
+            @Html.Partial("_QuickLinks")
+        </header>
+
+        <div id="main-container" class="clearfix">
+            <div id="main">
+                @RenderBody()
+            </div>
+            <aside id="sidebar">
+                @if (IsSectionDefined("Sidebar"))
+                {
+                    @RenderSection("Sidebar", false)
+                }
+                else
+                {
+                    @Html.Partial("_Sidebar")
+                }
+            </aside>
+        </div>
+        <footer id="footer">
+            @Html.Partial("Footer")
+        </footer>
+    </div>
+    @Html.Partial("Master.Script")
+    @foreach (var script in CustomWebResources.GetScripts(ViewContext.RequestContext))
+    {
+        @script.Body
+    }
+</body>
+</html>
