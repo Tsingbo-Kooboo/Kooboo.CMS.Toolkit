@@ -4056,43 +4056,13 @@
   <data name="The repository does not exists:'{0}'" xml:space="preserve">
     <value>数据库中不存在:"{0}"</value>
   </data>
-  <data name="Show unlocalized page names" xml:space="preserve">
-    <value>Show unlocalized page names</value>
-  </data>
   <data name="Category" xml:space="preserve">
     <value>Category</value>
   </data>
   <data name="Readings" xml:space="preserve">
     <value>Readings</value>
   </data>
-  <data name="IsLocalized" xml:space="preserve">
-    <value>IsLocalized</value>
-  </data>
-  <data name="名称" xml:space="preserve">
-    <value>名称</value>
-  </data>
-  <data name="The Tree style data field is required." xml:space="preserve">
-    <value>The Tree style data field is required.</value>
-  </data>
   <data name="Latest modification date" xml:space="preserve">
     <value>Latest modification date</value>
-  </data>
-  <data name="用户名" xml:space="preserve">
-    <value>用户名</value>
-  </data>
-  <data name="邮件" xml:space="preserve">
-    <value>邮件</value>
-  </data>
-  <data name="管理员" xml:space="preserve">
-    <value>管理员</value>
-  </data>
-  <data name="被锁定" xml:space="preserve">
-    <value>被锁定</value>
-  </data>
-  <data name="The Is administrator field is required." xml:space="preserve">
-    <value>The Is administrator field is required.</value>
-  </data>
-  <data name="The Is locked out field is required." xml:space="preserve">
-    <value>The Is locked out field is required.</value>
   </data>
 </root>

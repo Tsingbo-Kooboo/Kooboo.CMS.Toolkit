@@ -50,7 +50,11 @@ media_library_title ="@("Selected Files".Localize())" type="text/plain">@Html.Ra
             <label for="Description">Description</label>
             </th>
             <td>
-            <textarea name="Description" id="Description" class="Description tinymce" media_library_url="@Url.Action("Selection","MediaContent",ViewContext.RequestContext.AllRouteValues()))" media_library_title ="@("Selected Files".Localize())" rows="10" cols="100">@( Model.Description ?? "")</textarea>            
+            <div class="extra-large"><script name="Description" id="Description" class="0 ueditor" 
+media_library_url="@Url.Action("Selection","MediaContent",ViewContext.RequestContext.AllRouteValues()))" 
+media_library_title ="@("Selected Files".Localize())" type="text/plain">@Html.Raw(Model.Description ?? "")</script></div>
+<script>UE.getEditor("Description").addListener("contentChange", function () {$.publish(kooboo.constants.messageToptics.SomeThing_Changed_On_Page);});</script>
+            
             @Html.ValidationMessageForColumn(((ISchema)ViewData["Schema"])["Description"], null)
             
             </td>          
