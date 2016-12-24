@@ -20,7 +20,7 @@
     <span class="date">@ViewHelper.DateTimeToString(ViewBag.Article.UtcCreationDate, "yyyy-MM-dd")</span>
 </header>
 <section class="content" @ViewHelper.Edit(ViewBag.Article, "Description")>
-    @Html.Raw(ViewBag.Article.Description ?? "")
+    @Html.Raw(ViewBag.Article.UEditor ?? "")
 </section>
 <footer>
     <div id="comments" class="block comment">

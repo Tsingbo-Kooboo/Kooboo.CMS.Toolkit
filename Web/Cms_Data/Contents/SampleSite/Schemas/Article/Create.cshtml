@@ -24,24 +24,24 @@
             </td>          
             </tr><tr>
             <th>
-            <label for="Summary">Summary</label>
-            </th>
-            <td>
-            <textarea class="extra-large" name="Summary" >@(Model.Summary ?? "")</textarea>             
-            @Html.ValidationMessageForColumn(((ISchema)ViewData["Schema"])["Summary"], null)
-            
-            </td>          
-            </tr><tr>
-            <th>
             <label for="UEditor">UEditor</label>
             </th>
             <td>
             <div class="extra-large"><script name="UEditor" id="UEditor" class="0 ueditor" 
 media_library_url="@Url.Action("Selection","MediaContent",ViewContext.RequestContext.AllRouteValues()))" 
-media_library_title ="@("Selected Files".Localize())" type="text/plain">@( Model.UEditor ?? "")</script></div>
-<script>UE.getEditor("UEditor");</script>
+media_library_title ="@("Selected Files".Localize())" type="text/plain">@Html.Raw(Model.UEditor ?? "")</script></div>
+<script>UE.getEditor("UEditor").addListener("contentChange", function () {$.publish(kooboo.constants.messageToptics.SomeThing_Changed_On_Page);});</script>
             
             @Html.ValidationMessageForColumn(((ISchema)ViewData["Schema"])["UEditor"], null)
+            
+            </td>          
+            </tr><tr>
+            <th>
+            <label for="Summary">Summary</label>
+            </th>
+            <td>
+            <textarea class="extra-large" name="Summary" >@(Model.Summary ?? "")</textarea>             
+            @Html.ValidationMessageForColumn(((ISchema)ViewData["Schema"])["Summary"], null)
             
             </td>          
             </tr><tr>
