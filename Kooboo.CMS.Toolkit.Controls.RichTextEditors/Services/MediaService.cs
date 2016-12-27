@@ -70,6 +70,11 @@ namespace Kooboo.CMS.Toolkit.Controls.RichTextEditors.Services
             }
             var repository = new Repository(repositoryName).AsActual();
             var currentFolder = _mediaFolderManager.Get(repository, folderName);
+            if (currentFolder == null)
+            {
+                currentFolder = new MediaFolder(repository, folderName);
+                _mediaFolderManager.Add(repository, currentFolder);
+            }
             var contentQuery = currentFolder.CreateQuery();
             if (!string.IsNullOrEmpty(search))
             {
