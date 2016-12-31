@@ -126,6 +126,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CMSAssemblyInfoGlobal.cs">
+      <Link>CMSAssemblyInfoGlobal.cs</Link>
+    </Compile>
     <Compile Include="Controllers\UEditorController.cs" />
     <Compile Include="ControlsInitializer.cs" />
     <Compile Include="Models\CrawlerViewModel.cs" />
@@ -349,7 +352,6 @@
     <Content Include="Scripts\ueditor\third-party\zeroclipboard\ZeroClipboard.js" />
     <Content Include="Scripts\ueditor\third-party\zeroclipboard\ZeroClipboard.min.js" />
     <Content Include="Scripts\ueditor\third-party\zeroclipboard\ZeroClipboard.swf" />
-    <Content Include="Scripts\ueditor\ueditor.all.js" />
     <Content Include="Scripts\ueditor\ueditor.all.min.js" />
     <Content Include="Scripts\ueditor\ueditor.config.js" />
   </ItemGroup>
