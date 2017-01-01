@@ -7,4 +7,12 @@ del *.nupkg
 
 nuget pack ..\Kooboo.CMS.Toolkit.Controls.RichTextEditors\Kooboo.CMS.Toolkit.Controls.RichTextEditors.csproj -Prop Configuration=Release
 
+nuget pack ..\Kooboo.CMS.Toolkit\Kooboo.CMS.Toolkit.csproj -Prop Configuration=Release
+
+nuget pack ..\Kooboo.CMS.Toolkit.Controls\Kooboo.CMS.Toolkit.Controls.csproj -Prop Configuration=Release
+
+nuget pack ..\Kooboo.CMS.Membership.China\Kooboo.CMS.Membership.China.csproj -Prop Configuration=Release
+
+nuget pack ..\Kooboo.CMS.Content.UserKeyGenerator.Chinese\Kooboo.CMS.Content.UserKeyGenerator.Chinese.csproj -Prop Configuration=Release
+
 @pause
