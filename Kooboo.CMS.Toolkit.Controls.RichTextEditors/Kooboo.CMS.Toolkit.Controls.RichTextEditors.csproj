@@ -354,7 +354,7 @@
     <Content Include="Scripts\ueditor\third-party\zeroclipboard\ZeroClipboard.js" />
     <Content Include="Scripts\ueditor\third-party\zeroclipboard\ZeroClipboard.min.js" />
     <Content Include="Scripts\ueditor\third-party\zeroclipboard\ZeroClipboard.swf" />
-    <Content Include="Scripts\ueditor\ueditor.all.min.js" />
+    <Content Include="Scripts\ueditor\ueditor.all.js" />
     <Content Include="Scripts\ueditor\ueditor.config.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

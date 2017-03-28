@@ -32,7 +32,7 @@ gulp.task("clean:css", function (cb) {
 gulp.task("clean", ["clean:js", "clean:css"]);
 
 gulp.task("min:js", function () {
-    return gulp.src([paths.js, "!" + paths.minJs], { base: "." })
+    return gulp.src([paths.js, "!" + paths.minJs], { base: webroot + 'ueditor/' })
         //.pipe(concat(paths.concatJsDest))
         .pipe(uglify())
         .pipe(gulp.dest(paths.outputDir));

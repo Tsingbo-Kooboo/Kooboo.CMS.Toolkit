@@ -17657,9 +17657,14 @@ UE.plugins['video'] = function (){
                     ' src="' + me.options.UEDITOR_HOME_URL+'themes/default/images/spacer.gif" style="background:url('+me.options.UEDITOR_HOME_URL+'themes/default/images/videologo.gif) no-repeat center center; border:1px solid gray;'+(align ? 'float:' + align + ';': '')+'" />'
                 break;
             case 'embed':
-                str = '<embed type="application/x-shockwave-flash" class="' + classname + '" pluginspage="http://www.macromedia.com/go/getflashplayer"' +
-                    ' src="' +  utils.html(url) + '" width="' + width  + '" height="' + height  + '"'  + (align ? ' style="float:' + align + '"': '') +
-                    ' wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" >';
+                //str = '<embed type="application/x-shockwave-flash" class="' + classname + '" pluginspage="http://www.macromedia.com/go/getflashplayer"' +
+                //    ' src="' +  utils.html(url) + '" width="' + width  + '" height="' + height  + '"'  + (align ? ' style="float:' + align + '"': '') +
+                //    ' wmode="transparent" play="true" loop="false" menu="false" allowscriptaccess="never" allowfullscreen="true" >';
+                //break;
+            case 'iframe':
+                str = '<iframe class="' + classname + '"' +
+                    ' src="' + utils.html(url) + '" width="' + width + '" height="' + height + '"' + (align ? ' style="float:' + align + '"' : '') +
+                    ' ></iframe>';
                 break;
             case 'video':
                 var ext = url.substr(url.lastIndexOf('.') + 1);
@@ -17676,7 +17681,7 @@ UE.plugins['video'] = function (){
         utils.each(root.getNodesByTagName(img2video ? 'img' : 'embed video'),function(node){
             var className = node.getAttr('class');
             if(className && className.indexOf('edui-faked-video') != -1){
-                var html = creatInsertStr( img2video ? node.getAttr('_url') : node.getAttr('src'),node.getAttr('width'),node.getAttr('height'),null,node.getStyle('float') || '',className,img2video ? 'embed':'image');
+                var html = creatInsertStr( img2video ? node.getAttr('_url') : node.getAttr('src'),node.getAttr('width'),node.getAttr('height'),null,node.getStyle('float') || '',className,img2video ? 'iframe':'image');
                 node.parentNode.replaceChild(UE.uNode.createElement(html),node);
             }
             if(className && className.indexOf('edui-upload-video') != -1){

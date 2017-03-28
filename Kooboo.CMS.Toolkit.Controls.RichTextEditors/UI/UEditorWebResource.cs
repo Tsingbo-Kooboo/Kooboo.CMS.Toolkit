@@ -43,7 +43,7 @@ namespace Kooboo.CMS.Toolkit.Controls.RichTextEditors.UI
 
         public IEnumerable<WebResource> GetStyles(RequestContext requestContext)
         {
-            var scripts = new string[] { "ueditor.config.js", "ueditor.all.min.js" }
+            var scripts = new string[] { "ueditor.config.js", "ueditor.all.js" }
             .Select(it => $"<script src=\"/Scripts/ueditor/{it}\"></script>")
             .ToList();
             scripts.Add("");
