@@ -178,7 +178,7 @@
             .replace(/www\.tudou\.com\/programs\/view\/([\w\-]+)\/?/i, "www.tudou.com/v/$1")
             .replace(/v\.qq\.com\/cover\/[\w]+\/[\w]+\/([\w]+)\.html/i, "static.video.qq.com/TPout.swf?vid=$1")
             .replace(/v\.qq\.com\/.+[\?\&]vid=([^&]+).*$/i, "static.video.qq.com/TPout.swf?vid=$1")
-            .replace(/v\.qq\.com\/x\/page\/([^&]+)\.html$/i, "v.qq.com/iframe/player.html?vid=$1")
+            .replace(/v\.qq\.com\/x\/page\/([^&\.]+)\.html$/i, "v.qq.com/iframe/player.html?vid=$1")
             .replace(/my\.tv\.sohu\.com\/[\w]+\/[\d]+\/([\d]+)\.shtml.*$/i, "share.vrs.sohu.com/my/v.swf&id=$1");
 
         return url;
