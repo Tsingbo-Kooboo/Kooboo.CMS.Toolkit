@@ -16,6 +16,11 @@ namespace Kooboo.CMS.Toolkit.Controls
     /// </summary>
     public class CascadingDropdown : ControlBase
     {
+        public override bool HasDataSource
+        {
+            get { return true; }
+        }
+
         public override string Name
         {
             get { return "CascadingDropdown"; }
@@ -49,6 +54,10 @@ namespace Kooboo.CMS.Toolkit.Controls
             {
                 folder = column.CustomSettings["Folder"];
             }
+            else if (!string.IsNullOrEmpty(column.SelectionFolder))
+            {
+                folder = column.SelectionFolder;
+            }
             var parentColumn = schema.Columns.FirstOrDefault(it => it.Name.EqualsOrNullEmpty(parent, StringComparison.OrdinalIgnoreCase));
             string script = "";
             if (parentColumn != null)
@@ -57,6 +66,10 @@ namespace Kooboo.CMS.Toolkit.Controls
                 if (parentColumn.CustomSettings != null && parentColumn.CustomSettings.ContainsKey("Folder"))
                 {
                     parentFolder = parentColumn.CustomSettings["Folder"];
+                }
+                else if (!string.IsNullOrEmpty(parentColumn.SelectionFolder))
+                {
+                    parentFolder = parentColumn.SelectionFolder;
                 }
                 script = string.Format(@"$(""#{0}"").jCombo(""@Html.Raw(Url.Action(""Index"",""Cascading"",new {{repositoryName = Request.RequestContext.AllRouteValues()[""repositoryName""],Area=""ToolkitControls"",folder=""{1}"",parentFolder=""{2}""}}))&parentUUID="",{{dataType:""json"",parent:""#{3}"",selected_value:""@Model.{0}"",parent_value:""@Model.{3}"",initial_text:""{4}""}});"
                     , id, folder, parentFolder, parent, column.DefaultValue);
