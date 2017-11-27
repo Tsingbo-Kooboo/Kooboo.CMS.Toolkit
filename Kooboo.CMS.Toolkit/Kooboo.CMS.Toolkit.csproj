@@ -35,53 +35,41 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Kooboo, Version=4.5.0.1224, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kooboo.Core.4.5.0.1224\lib\Kooboo.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kooboo, Version=4.5.1.812, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kooboo.Core.4.5.1.812\lib\Kooboo.dll</HintPath>
     </Reference>
-    <Reference Include="Kooboo.CMS.Account, Version=4.5.0.1224, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kooboo.Core.4.5.0.1224\lib\Kooboo.CMS.Account.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kooboo.CMS.Account, Version=4.5.1.812, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kooboo.Core.4.5.1.812\lib\Kooboo.CMS.Account.dll</HintPath>
     </Reference>
-    <Reference Include="Kooboo.CMS.Caching, Version=4.5.0.1224, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kooboo.Core.4.5.0.1224\lib\Kooboo.CMS.Caching.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kooboo.CMS.Caching, Version=4.5.1.812, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kooboo.Core.4.5.1.812\lib\Kooboo.CMS.Caching.dll</HintPath>
     </Reference>
-    <Reference Include="Kooboo.CMS.Common, Version=4.5.0.1224, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kooboo.Core.4.5.0.1224\lib\Kooboo.CMS.Common.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kooboo.CMS.Common, Version=4.5.1.812, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kooboo.Core.4.5.1.812\lib\Kooboo.CMS.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Kooboo.CMS.Common.Runtime.Dependency.Ninject, Version=4.5.0.1224, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kooboo.Core.4.5.0.1224\lib\Kooboo.CMS.Common.Runtime.Dependency.Ninject.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kooboo.CMS.Common.Runtime.Dependency.Ninject, Version=4.5.1.812, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kooboo.Core.4.5.1.812\lib\Kooboo.CMS.Common.Runtime.Dependency.Ninject.dll</HintPath>
     </Reference>
-    <Reference Include="Kooboo.CMS.Content, Version=4.5.0.1224, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kooboo.Core.4.5.0.1224\lib\Kooboo.CMS.Content.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kooboo.CMS.Content, Version=4.5.1.812, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kooboo.Core.4.5.1.812\lib\Kooboo.CMS.Content.dll</HintPath>
     </Reference>
-    <Reference Include="Kooboo.CMS.Form, Version=4.5.0.1224, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kooboo.Core.4.5.0.1224\lib\Kooboo.CMS.Form.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kooboo.CMS.Form, Version=4.5.1.812, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kooboo.Core.4.5.1.812\lib\Kooboo.CMS.Form.dll</HintPath>
     </Reference>
     <Reference Include="Kooboo.CMS.Membership, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kooboo.Core.4.5.0.1224\lib\Kooboo.CMS.Membership.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Kooboo.Core.4.5.1.812\lib\Kooboo.CMS.Membership.dll</HintPath>
     </Reference>
-    <Reference Include="Kooboo.CMS.Search, Version=4.5.0.1224, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kooboo.Core.4.5.0.1224\lib\Kooboo.CMS.Search.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kooboo.CMS.Search, Version=4.5.1.812, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kooboo.Core.4.5.1.812\lib\Kooboo.CMS.Search.dll</HintPath>
     </Reference>
-    <Reference Include="Kooboo.CMS.Sites, Version=4.5.0.1224, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kooboo.Core.4.5.0.1224\lib\Kooboo.CMS.Sites.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kooboo.CMS.Sites, Version=4.5.1.812, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kooboo.Core.4.5.1.812\lib\Kooboo.CMS.Sites.dll</HintPath>
     </Reference>
-    <Reference Include="Kooboo.CMS.Sites.TemplateEngines.Razor, Version=4.5.0.1224, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kooboo.Core.4.5.0.1224\lib\Kooboo.CMS.Sites.TemplateEngines.Razor.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kooboo.CMS.Sites.TemplateEngines.Razor, Version=4.5.1.812, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kooboo.Core.4.5.1.812\lib\Kooboo.CMS.Sites.TemplateEngines.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="Kooboo.CMS.Web, Version=4.5.0.1224, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kooboo.Core.4.5.0.1224\lib\Kooboo.CMS.Web.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kooboo.CMS.Web, Version=4.5.1.812, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kooboo.Core.4.5.1.812\lib\Kooboo.CMS.Web.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>

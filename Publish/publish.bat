@@ -19,10 +19,10 @@ call update_version.vbs
 
 cd..
 
-"C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild" Kooboo.Toolkits.sln /t:rebuild /l:FileLogger,Microsoft.Build.Engine;logfile=Publish\Publish.log;
+"C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" Kooboo.Toolkits.sln /t:rebuild /l:FileLogger,Microsoft.Build.Engine;logfile=Publish\Publish.log;
 
-"C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild" Kooboo.CMS.Toolkit\Kooboo.CMS.Toolkit.csproj /t:ResolveReferences;Compile /p:Configuration=Release logfile=Publish\Publish.log;
-"C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild" Kooboo.CMS.Toolkit.Controls\Kooboo.CMS.Toolkit.Controls.csproj /t:ResolveReferences;Compile /p:Configuration=Release logfile=Publish\Publish.log;
+"C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" Kooboo.CMS.Toolkit\Kooboo.CMS.Toolkit.csproj /t:ResolveReferences;Compile /p:Configuration=Release logfile=Publish\Publish.log;
+"C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" Kooboo.CMS.Toolkit.Controls\Kooboo.CMS.Toolkit.Controls.csproj /t:ResolveReferences;Compile /p:Configuration=Release logfile=Publish\Publish.log;
 
 cd Kooboo.CMS.Toolkit
 copy "bin\Release\Kooboo.CMS.Toolkit.dll" "..\Publish\Release\Kooboo.CMS.Toolkit\lib\Kooboo.CMS.Toolkit.dll"
