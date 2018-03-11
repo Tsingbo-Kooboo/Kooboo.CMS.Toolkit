@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kooboo.CMS.Toolkit", "Kooboo.CMS.Toolkit\Kooboo.CMS.Toolkit.csproj", "{3BAE0F65-BEDF-4057-BAA8-CD479FD637A7}"
 EndProject
@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		gulpfile.js = gulpfile.js
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kooboo.CMS.Toolkit.Controls.FroalaEditor", "Kooboo.CMS.Toolkit.Controls.FroalaEditor\Kooboo.CMS.Toolkit.Controls.FroalaEditor.csproj", "{6B4534E9-CA4D-4DBA-805C-1A5059FD9251}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,11 +60,18 @@ Global
 		{9F95DE9C-DBD1-4133-BB9B-401C69A4D92B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F95DE9C-DBD1-4133-BB9B-401C69A4D92B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F95DE9C-DBD1-4133-BB9B-401C69A4D92B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B4534E9-CA4D-4DBA-805C-1A5059FD9251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B4534E9-CA4D-4DBA-805C-1A5059FD9251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B4534E9-CA4D-4DBA-805C-1A5059FD9251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B4534E9-CA4D-4DBA-805C-1A5059FD9251}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{71F5F693-3E00-454A-8579-F43A0C6B0E51} = {2A6A47CC-0E19-47F3-AAD9-3FB395F927C7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {452449DC-2EAF-4AB4-9855-692C4FF2104D}
 	EndGlobalSection
 EndGlobal

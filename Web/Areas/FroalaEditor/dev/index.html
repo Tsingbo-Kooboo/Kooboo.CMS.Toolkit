@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="shortcut icon" href="javascript:;" />
+  <title>
+    Add content: News - Kooboo CMS
+  </title>
+  <link rel="Stylesheet" href="./resources/WebResource.css" type="text/css" />
+  <script src="./resources/WebResource.js" type="text/javascript"></script>
+</head>
+
+<body class="loading">
+  <div class="block loading">
+    <div class="layer"></div>
+    <div class="wrap">
+      <span>Loading</span>
+      <img src="/Images/loading.gif" />
+    </div>
+  </div>
+  <div class="block notification">
+    <a class="close">
+      <img class="icon close" src="/Images/invis.gif" /> </a>
+    <p></p>
+  </div>
+  <div id="body-container">
+    <header id="header">
+      <a class="logo" href="javascript:;" title="Back to site manager">
+        <img src="/Images/logo.png" alt="LOGO" />
+        <img class="icon home" src="/Images/invis.gif" /> </a>
+      <ul class="panel">
+        <li>
+          <button data-ajaxform="" data-no-change-disabled="">
+            <img class="icon save" src="/Images/invis.gif" /> Save </button>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <img class="icon cancel" src="/Images/invis.gif" /> Back </a>
+        </li>
+      </ul>
+      <ul class="quicklinks">
+        <li>
+          <a href="javascript:;">
+            <img class="icon users-roles" src="/Images/invis.gif" /> Users </a>
+        </li>
+        <li class="last j_DropDown">
+          <a>
+            <img class="icon profile" src="/Images/invis.gif" />
+            <img class="icon arrow small white-down" src="/Images/invis.gif" /> admin </a>
+          <ul class="j_DropDownContent hide">
+            <li>
+              <a data-ajax="POST" href="javascript:;">Set as default page</a>
+            </li>
+            <li>
+              <a href="javascript:;">Change language</a>
+            </li>
+            <li>
+              <a href="javascript:;">Change password</a>
+            </li>
+            <li>
+              <a href="javascript:;">Sign out</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <div id="main-container" class="clearfix">
+      <div id="main">
+        <div class="block common-form">
+          <h1 class="title">Add content: News</h1>
+          <form action="/Contents/TextContent/Create?repositoryName=SampleSite&amp;siteName=SampleSite&amp;FolderName=News&amp;Folder=News&amp;FullName=News&amp;return=%2FContents%2FTextContent%3FrepositoryName%3DSampleSite%26siteName%3DSampleSite%26FolderName%3DNews%26Folder%3DNews%26FullName%3DNews"
+            enctype="application/x-www-form-urlencoded" method="post">
+            <input class="long" id="UtcLastModificationDate" name="UtcLastModificationDate" type="hidden" value="2018/3/11 13:29:47"
+            />
+            <input class="long" id="UserId" name="UserId" type="hidden" value="" data-val-length="The field UserId must be a string with a maximum length of 36."
+              data-val-length-max="36" data-val="true" />
+            <input class="long" id="UtcLastModificationDate" name="UtcLastModificationDate" type="hidden" value="2018/3/11 13:29:47"
+            />
+            <input class="long" id="UserId" name="UserId" type="hidden" value="" data-val-length="The field UserId must be a string with a maximum length of 36."
+              data-val-length-max="36" data-val="true" />
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    <label for="Title">Title</label>
+                  </th>
+                  <td>
+                    <input class="long" id="Title" name="Title" type="text" value="" />
+                    <span class="field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <label for="Content">Content</label>
+                  </th>
+                  <td>
+                    <div id="app">
+                      <textarea class="extra-large" name="Content"></textarea>
+                    </div>
+                    <span class="field-validation-valid" data-valmsg-for="Content" data-valmsg-replace="true"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th> </th>
+                  <td>
+                    <input id="Published" name="Published" type="checkbox" value="true" />
+                    <input type="hidden" value="false" name="Published" />
+                    <label class="inline" for="Published">Published</label>
+                    <span class="field-validation-valid" data-valmsg-for="Published" data-valmsg-replace="true"></span>
+                  </td>
+                </tr>
+                <input class="long" id="UtcLastModificationDate" name="UtcLastModificationDate" type="hidden" value="2018/3/11 13:29:47"
+                />
+                <input class="long" id="UserId" name="UserId" type="hidden" value="" data-val-length="The field UserId must be a string with a maximum length of 36."
+                  data-val-length-max="36" data-val="true" />
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+      <aside id="sidebar">
+        <div class="topbar block sitemanager clearfix">
+          <a class="right" href="javascript:;" title="Go to site cluster">
+            <img class="icon cluster" src="/Images/invis.gif" /> </a>
+          <h6 class="title">Site manager</h6>
+          <div class="switcher active">
+            <span class="current">
+              <span>SampleSite</span>
+              <img class="icon arrow switch" src="/Images/invis.gif" /> </span>
+            <ul class="list">
+              <li class="active">
+                <a href="javascript:;">SampleSite</a>
+                <ul>
+                  <li>
+                    <a href="javascript:;">CN</a>
+                    <ul>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="javascript:;">EU</a>
+                    <ul>
+                      <li>
+                        <a href="javascript:;">DE</a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="javascript:;">FR</a>
+                        <ul>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="javascript:;">US</a>
+                    <ul>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <a class="right add" href="javascript:;" title="New sub site">
+            <img class="icon add" src="/Images/invis.gif" /> </a>
+        </div>
+        <nav class="container block menu">
+          <ul>
+            <li class="Start">
+              <a href="javascript:;" title="Start">Start</a>
+            </li>
+            <li class="Global">
+              <span class="arrow">
+                <img class="icon arrow" src="/Images/invis.gif" /> </span>
+              <a class="action" title="System">System</a>
+              <ul>
+                <li class="System">
+                  <a href="javascript:;" title="Settings">Settings</a>
+                </li>
+                <li class="Users">
+                  <a href="javascript:;" title="Site users">Site users</a>
+                </li>
+                <li class="CustomErrors">
+                  <a href="javascript:;" title="Custom errors">Custom errors</a>
+                </li>
+                <li class="UrlRedirects">
+                  <a href="javascript:;" title="Url redirects">Url redirects</a>
+                </li>
+                <li class="Robots_txt">
+                  <a href="javascript:;" title="Robots.txt">Robots.txt</a>
+                </li>
+                <li class="SystemDiagnosis">
+                  <a href="javascript:;" title="Diagnosis">Diagnosis</a>
+                </li>
+                <li class="VisitRule">
+                  <span class="arrow">
+                    <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                  <a class="action" title="A/B Test">A/B Test</a>
+                  <ul>
+                    <li class="ABRuleSetting">
+                      <a href="javascript:;" title="A/B rules">A/B rules</a>
+                    </li>
+                    <li class="ABPageSetting">
+                      <a href="javascript:;" title="A/B page settings">A/B page settings</a>
+                    </li>
+                    <li class="ABPageTestResult">
+                      <a href="javascript:;" title="A/B test reports">A/B test reports</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="Templates">
+              <span class="arrow">
+                <img class="icon arrow" src="/Images/invis.gif" /> </span>
+              <a class="action" title="Development">Development</a>
+              <ul>
+                <li class="Layouts">
+                  <a href="javascript:;" title="Layouts">Layouts</a>
+                </li>
+                <li class="Views   folder">
+                  <span class="arrow">
+                    <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                  <a href="javascript:;" title="Views">Views</a>
+                  <ul>
+                    <li class="folder">
+                      <span class="arrow">
+                        <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                      <a href="javascript:;" title="Article">Article</a>
+                      <ul>
+                        <li class="folder">
+                          <a href="javascript:;" title="Detail">Detail</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="folder">
+                      <a href="javascript:;" title="Member">Member</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="Labels">
+                  <a href="javascript:;" title="Labels">Labels</a>
+                </li>
+                <li class="Scripts">
+                  <a href="javascript:;" title="Scripts">Scripts</a>
+                </li>
+                <li class="Themes">
+                  <span class="arrow">
+                    <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                  <a href="javascript:;" title="Themes">Themes</a>
+                  <ul>
+                    <li>
+                      <span class="arrow">
+                        <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                      <a href="javascript:;" title="Default">Default</a>
+                      <ul>
+                        <li>
+                          <a href="javascript:;" title="images">images</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="CustomFiles">
+                  <a href="javascript:;" title="Files">Files</a>
+                </li>
+                <li class="Pagemapping">
+                  <a href="javascript:;" title="Page mapping">Page mapping</a>
+                </li>
+                <li class="SubmissionSetting">
+                  <a href="javascript:;" title="Submission setting">Submission setting</a>
+                </li>
+              </ul>
+            </li>
+            <li class="Extensions">
+              <span class="arrow">
+                <img class="icon arrow" src="/Images/invis.gif" /> </span>
+              <a class="action" title="Extension">Extension</a>
+              <ul>
+                <li class="Plugins">
+                  <a href="javascript:;" title="Plug-ins">Plug-ins</a>
+                </li>
+                <li class="Modules">
+                  <a href="javascript:;" title="Modules">Modules</a>
+                </li>
+              </ul>
+            </li>
+            <li class="Pages">
+              <span class="arrow">
+                <img class="icon arrow" src="/Images/invis.gif" /> </span>
+              <a href="javascript:;" title="Pages">Pages</a>
+              <ul>
+                <li>
+                  <span class="arrow">
+                    <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                  <a class="home" href="javascript:;" title="Articles">Articles</a>
+                  <ul>
+                    <li>
+                      <a href="javascript:;" title="Detail">Detail</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:;" title="about">About us</a>
+                </li>
+                <li>
+                  <a href="javascript:;" title="Search">Search</a>
+                </li>
+                <li>
+                  <span class="arrow">
+                    <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                  <a href="javascript:;" title="Member">Member</a>
+                  <ul>
+                    <li>
+                      <a href="javascript:;" title="Login">Login</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" title="Register">Register member</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" title="Activate">Activate</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" title="Profile">Member profile</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" title="ChangePassword">ChangePassword</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" title="ConfirmMail">Reset password</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" title="ForgotPassword">Forgot password</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" title="ResetPassword">Reset password</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:;" title="A">A</a>
+                </li>
+                <li>
+                  <a href="javascript:;" title="B">B</a>
+                </li>
+              </ul>
+            </li>
+            <li class="Repository active">
+              <span class="arrow">
+                <img class="icon arrow" src="/Images/invis.gif" /> </span>
+              <a class="action" title="Content">Content</a>
+              <ul>
+                <li class="Home">
+                  <a href="javascript:;" title="Start">Start</a>
+                </li>
+                <li class="Settings">
+                  <a href="javascript:;" title="Settings">Settings</a>
+                </li>
+                <li class="Search">
+                  <span class="arrow">
+                    <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                  <a class="action" title="Search">Search</a>
+                  <ul>
+                    <li class="SearchSetting">
+                      <a href="javascript:;" title="Settings">Settings</a>
+                    </li>
+                    <li class="IndexDashboard">
+                      <a href="javascript:;" title="Indexed data">Indexed data</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="ContentTypes">
+                  <a href="javascript:;" title="Content type">Content type</a>
+                </li>
+                <li class="Broadcasting">
+                  <span class="arrow">
+                    <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                  <a class="action" title="Broadcasting">Broadcasting</a>
+                  <ul>
+                    <li class="SendingSetting">
+                      <a href="javascript:;" title="Sending setting">Sending setting</a>
+                    </li>
+                    <li class="ReceivingSetting">
+                      <a href="javascript:;" title="Receiving setting">Receiving setting</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="Contents active  folder">
+                  <span class="arrow">
+                    <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                  <a href="javascript:;" title="Contents">Contents</a>
+                  <ul>
+                    <li>
+                      <span class="arrow">
+                        <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                      <a class="TextFolder Article" href="javascript:;" title="Article">Article</a>
+                      <ul>
+                        <li>
+                          <a class="TextFolder Article-ArticleSub" href="javascript:;" title="ArticleSub">测试子目录</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class=" active current ">
+                      <a class="TextFolder News" href="javascript:;" title="News">News</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="Media   folder">
+                  <span class="arrow">
+                    <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                  <a href="javascript:;" title="Media Library">Media Library</a>
+                  <ul>
+                    <li class="folder">
+                      <span class="arrow">
+                        <img class="icon arrow" src="/Images/invis.gif" /> </span>
+                      <a class="TextFolder aa" href="javascript:;" title="aa">aa</a>
+                      <ul>
+                        <li class="folder">
+                          <a class="TextFolder aa-ttt" href="javascript:;" title="ttt">测试显示名字</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="folder">
+                      <a class="TextFolder b" href="javascript:;" title="b">b</a>
+                    </li>
+                    <li class="folder">
+                      <a class="TextFolder test123" href="javascript:;" title="test123">test123</a>
+                    </li>
+                    <li class="folder">
+                      <a class="TextFolder test" href="javascript:;" title="test">测试</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="HtmlBlock">
+                  <a href="javascript:;" title="Html block">Html block</a>
+                </li>
+              </ul>
+            </li>
+            <li class="Membership">
+              <span class="arrow">
+                <img class="icon arrow" src="/Images/invis.gif" /> </span>
+              <a class="action" title="Membership">Membership</a>
+              <ul>
+                <li class="MembershipSetting">
+                  <a href="javascript:;" title="Setting">Setting</a>
+                </li>
+                <li class="MembershipUser">
+                  <a href="javascript:;" title="Members">Members</a>
+                </li>
+                <li class="MembershipGroup">
+                  <a href="javascript:;" title="Groups">Groups</a>
+                </li>
+                <li class="MembershipConnect">
+                  <a href="javascript:;" title="Connects">Connects</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+    <footer id="footer">
+      <p> Powered by Kooboo CMS 4.5.1.812 | &copy; 2009-2018
+        <a href="javascript:;" target="_blank">Kooboo team</a>
+      </p>
+    </footer>
+  </div>
+  <script src="/dist/build.js"></script>
+</body>
+
+</html>
