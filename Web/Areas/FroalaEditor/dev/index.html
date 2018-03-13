@@ -95,10 +95,8 @@
                   <th>
                     <label for="Content">Content</label>
                   </th>
-                  <td>
-                    <div id="app">
-                      <textarea class="extra-large" name="Content"></textarea>
-                    </div>
+                  <td class="kb-froala-editor">
+                    <kb-froala-editor class="extra-large" name="Content" :charCounterCount="false" :toolbarButtons="[]"></kb-froala-editor>
                     <span class="field-validation-valid" data-valmsg-for="Content" data-valmsg-replace="true"></span>
                   </td>
                 </tr>
@@ -466,7 +464,8 @@
       </p>
     </footer>
   </div>
-  <script src="/dist/build.js"></script>
+  <script src="/Areas/FroalaEditor/Scripts/vendor.js"></script>
+  <script src="/Areas/FroalaEditor/Scripts/app.js"></script>
 </body>
 
 </html>

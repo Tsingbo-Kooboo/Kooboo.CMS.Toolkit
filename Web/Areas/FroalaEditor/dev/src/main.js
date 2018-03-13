@@ -9,8 +9,13 @@ require('font-awesome/css/font-awesome.css')
 require('froala-editor/css/froala_style.min.css')
 import VueFroala from 'vue-froala-wysiwyg'
 Vue.use(VueFroala)
+const wrapperSelector = '.kb-froala-editor'
 
-new Vue({
-  el: '#app',
-  render: h => h(App)
+document.querySelectorAll(wrapperSelector).forEach((el, index) => {
+  let app = new Vue({
+    components: {
+      'kb-froala-editor': App
+    }
+  })
+  app.$mount(el)
 })

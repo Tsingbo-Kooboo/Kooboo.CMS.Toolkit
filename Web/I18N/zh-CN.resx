@@ -4065,4 +4065,31 @@
   <data name="Latest modification date" xml:space="preserve">
     <value>Latest modification date</value>
   </data>
+  <data name="Show unlocalized page names" xml:space="preserve">
+    <value>Show unlocalized page names</value>
+  </data>
+  <data name="标题" xml:space="preserve">
+    <value>标题</value>
+  </data>
+  <data name="文件类型" xml:space="preserve">
+    <value>文件类型</value>
+  </data>
+  <data name="日期" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="大小" xml:space="preserve">
+    <value>大小</value>
+  </data>
+  <data name="flv" xml:space="preserve">
+    <value>flv</value>
+  </data>
+  <data name="名称" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="The Tree style data field is required." xml:space="preserve">
+    <value>The Tree style data field is required.</value>
+  </data>
+  <data name="The Page size field is required." xml:space="preserve">
+    <value>The Page size field is required.</value>
+  </data>
 </root>

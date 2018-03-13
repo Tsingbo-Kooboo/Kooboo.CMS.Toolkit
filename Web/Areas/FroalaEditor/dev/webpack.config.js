@@ -2,11 +2,14 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    vendor: ['vue', 'vue-froala-wysiwyg', 'froala-editor'],
+    app: './src/main.js'
+  },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'build.js'
+    path: path.resolve(__dirname, '../Scripts'),
+    publicPath: '/Areas/FroalaEditor/Scripts',
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -15,7 +18,7 @@ module.exports = {
         use: [
           'vue-style-loader',
           'css-loader'
-        ],
+        ]
       }, {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -68,7 +71,6 @@ module.exports = {
     })
   ]
 }
-
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
@@ -79,10 +81,14 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
+      sourceMap: false,
       compress: {
         warnings: false
       }
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: Infinity
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true

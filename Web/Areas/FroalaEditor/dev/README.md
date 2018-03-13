@@ -18,3 +18,4 @@ npm run build
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 [image-server-upload](https://www.froala.com/wysiwyg-editor/docs/sdks/dotnet/image-server-upload)
+[options](https://www.froala.com/wysiwyg-editor/docs/options)

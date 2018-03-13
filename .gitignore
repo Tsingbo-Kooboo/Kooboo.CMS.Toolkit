@@ -238,5 +238,7 @@ _Pvt_Extensions
 .fake/
 
 */Cms_Data/Caching/*
-*/Cms_Data/Contents/*/Search/Index/
+*/Cms_Data/Contents/*/Search/
 */Cms_Data/Versions/*
+*/Cms_Data/Contents/*/Media/
+*/Cms_Data/Contents/*/Data/

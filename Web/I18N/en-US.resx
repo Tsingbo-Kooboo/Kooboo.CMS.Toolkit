@@ -382,4 +382,52 @@
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="Not Found - Kooboo CMS" xml:space="preserve">
+    <value>Not Found - Kooboo CMS</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Not Found</value>
+  </data>
+  <data name="If you see this page, it means that Kooboo CMS has been installed on this server." xml:space="preserve">
+    <value>If you see this page, it means that Kooboo CMS has been installed on this server.</value>
+  </data>
+  <data name="The requested URL was not found on this server. These could be the following reasons." xml:space="preserve">
+    <value>The requested URL was not found on this server. These could be the following reasons.</value>
+  </data>
+  <data name="You might have typed the URL incorrectly" xml:space="preserve">
+    <value>You might have typed the URL incorrectly</value>
+  </data>
+  <data name="Your page has been moved" xml:space="preserve">
+    <value>Your page has been moved</value>
+  </data>
+  <data name="You haven't created your Kooboo website yet. Please &lt;a href='{0}'&gt;login&lt;/a&gt; and create your first Kooboo website." xml:space="preserve">
+    <value>You haven't created your Kooboo website yet. Please &lt;a href='{0}'&gt;login&lt;/a&gt; and create your first Kooboo website.</value>
+  </data>
+  <data name="Sign in" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="The Remember me field is required." xml:space="preserve">
+    <value>The Remember me field is required.</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="Forgot password?" xml:space="preserve">
+    <value>Forgot password?</value>
+  </data>
+  <data name="Back to home page" xml:space="preserve">
+    <value>Back to home page</value>
+  </data>
+  <data name="About kooboo CMS" xml:space="preserve">
+    <value>About kooboo CMS</value>
+  </data>
+  <data name="This Enterprise CMS system saves time and allows you the freedom that you need to develop high-quality websites with a personal touch. We've streamlined the web development process." xml:space="preserve">
+    <value>This Enterprise CMS system saves time and allows you the freedom that you need to develop high-quality websites with a personal touch. We've streamlined the web development process.</value>
+  </data>
+  <data name="For a list of newly added features and a quick start guide,&lt;br /&gt;See: &lt;a href=&quot;http://www.kooboo.com/documents&quot; target=&quot;_blank&quot;&gt;http://www.kooboo.com/documents&lt;/a&gt;" xml:space="preserve">
+    <value>For a list of newly added features and a quick start guide,&lt;br /&gt;See: &lt;a href="http://www.kooboo.com/documents" target="_blank"&gt;http://www.kooboo.com/documents&lt;/a&gt;</value>
+  </data>
+  <data name="Sign in to the CMS and create your first Kooboo website, the default login is: &lt;strong&gt;admin/admin&lt;/strong&gt;" xml:space="preserve">
+    <value>Sign in to the CMS and create your first Kooboo website, the default login is: &lt;strong&gt;admin/admin&lt;/strong&gt;</value>
+  </data>
 </root>
