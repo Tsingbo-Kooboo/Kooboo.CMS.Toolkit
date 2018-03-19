@@ -28,7 +28,13 @@
             <label for="Content">Content</label>
             </th>
             <td>
-            <textarea class="extra-large" name="Content" >@(Model.Content ?? "")</textarea>             
+            <div class="extra-large kb-froala-editor">
+ <kb-froala-editor 
+    name="Content" 
+    id="Content" 
+    class="Content froala-editor-column" 
+    :toolbar-buttons1="['fullscreen','|','insertLink','insertImage','insertVideo','insertFile','insertTable']"></kb-froala-editor>
+</div>            
             @Html.ValidationMessageForColumn(((ISchema)ViewData["Schema"])["Content"], null)
             
             </td>          
