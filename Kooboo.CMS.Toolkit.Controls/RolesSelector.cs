@@ -9,13 +9,13 @@ using Kooboo.CMS.Common.Runtime;
 
 namespace Kooboo.CMS.Toolkit.Controls
 {
-    public class RoleSelector : Form.Html.Controls.DropDownList
+    public class RolesSelector : Form.Html.Controls.DropDownList
     {
         public override string Name
         {
             get
             {
-                return "RoleSelector";
+                return "RolesSelector";
             }
         }
 
@@ -41,7 +41,7 @@ namespace Kooboo.CMS.Toolkit.Controls
                     Selected = {0}Value != null && {0}Value.ToString().Split(',').Contains(it.UUID,StringComparer.OrdinalIgnoreCase)
                 }});
             }}
-            @Html.DropDownList(""{0}"", list{0}, new {{ @class = ""long select2""}})
+            @Html.DropDownList(""{0}"", list{0}, new {{ @class = ""long select2"",multiple=""multiple""}})
             <script>
                 $(function () {{
                     $(""#{0}"").select2();

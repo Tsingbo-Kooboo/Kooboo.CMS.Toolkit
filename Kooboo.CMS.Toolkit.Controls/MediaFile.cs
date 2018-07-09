@@ -91,7 +91,7 @@ namespace Kooboo.CMS.Toolkit.Controls
                 <!-- /ko -->
             </ul>";
 
-            var mediaLibraryUrl = String.Format(@"@Url.Action(""Selection"", ViewContext.RequestContext.AllRouteValues().Merge(""Controller"", ""MediaContent"").Merge(""FolderName"", null){0})""", AllowMultipleFiles ? "" : @".Merge(""SingleChoice"", ""true"")");
+            var mediaLibraryUrl = String.Format(@"@Url.Action(""Selection"", ViewContext.RequestContext.AllRouteValues().Merge(""Area"", ""Contents"").Merge(""Controller"", ""MediaContent"").Merge(""FolderName"", null){0})""", AllowMultipleFiles ? "" : @".Merge(""SingleChoice"", ""true"")");
 
             var func = String.Format(@"
                 {0}
