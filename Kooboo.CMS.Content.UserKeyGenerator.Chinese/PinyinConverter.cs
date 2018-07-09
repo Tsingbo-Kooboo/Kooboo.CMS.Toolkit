@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Kooboo.CMS.Content.UserKeyGenerator.Chinese
@@ -95,6 +96,7 @@ namespace Kooboo.CMS.Content.UserKeyGenerator.Chinese
         /// <returns>Pinyin Result</returns>
         public static string GetPinyin(string chineseString, string separator = null)
         {
+            Encoding enc = Encoding.GetEncoding("GB18030");
             Regex chinesePattern = new Regex("^[\u4e00-\u9fa5]$");
             byte[] arr = new byte[2];
             List<string> result = new List<string>();
@@ -111,7 +113,7 @@ namespace Kooboo.CMS.Content.UserKeyGenerator.Chinese
                         result.Add(tempString);
                         tempString = string.Empty;
                     }
-                    arr = System.Text.Encoding.Default.GetBytes(mChar[j].ToString());
+                    arr = enc.GetBytes(mChar[j].ToString());
                     M1 = (short)(arr[0]);
                     M2 = (short)(arr[1]);
                     asc = M1 * 256 + M2 - 65536;

@@ -14,7 +14,9 @@ namespace Kooboo.CMS.Toolkit.Controls
         {
             ControlHelper.RegisterControl(new DateTime());
             ControlHelper.RegisterControl(new UserSelector());
+            ControlHelper.RegisterControl(new UsersSelector());
             ControlHelper.RegisterControl(new RoleSelector());
+            ControlHelper.RegisterControl(new RolesSelector());
             ControlHelper.RegisterControl(new MemberSelector());
             ControlHelper.RegisterControl(new MembersSelector());
             ControlHelper.RegisterControl(new PageSelector());
@@ -29,6 +31,8 @@ namespace Kooboo.CMS.Toolkit.Controls
             ControlHelper.RegisterControl(new MediaFile());
             //ControlHelper.RegisterControl(new MediaFiles());
             ControlHelper.RegisterControl(new CascadingDropdown());
+            ControlHelper.RegisterControl(new TextFolderSelector());
+            ControlHelper.RegisterControl(new TextFoldersSelector());
         }
     }
 }

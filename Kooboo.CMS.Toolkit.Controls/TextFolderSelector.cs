@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Kooboo.CMS.Content.Models;
 using Kooboo.CMS.Form;
 using Kooboo.CMS.Form.Html;
-using Kooboo.CMS.Common.Runtime;
 
 namespace Kooboo.CMS.Toolkit.Controls
 {
-    public class RoleSelector : Form.Html.Controls.DropDownList
+    public class TextFolderSelector : Form.Html.Controls.DropDownList
     {
         public override string Name
         {
             get
             {
-                return "RoleSelector";
+                return "TextFolderSelector";
             }
         }
 
@@ -32,12 +32,12 @@ namespace Kooboo.CMS.Toolkit.Controls
             var inputBuilder = new StringBuilder();
             inputBuilder.AppendFormat(@"
             @{{ var dropDownDefault_{0} =  @""{1}"";
-                var query_{0} = Kooboo.CMS.Account.Services.ServiceFactory.RoleManager.All();
+                var query_{0} = Kooboo.CMS.Content.Services.ServiceFactory.TextFolderManager.All(Repository.Current, """");;
                 string {0}Value = Model.{0};
                 var list{0} = query_{0}.ToArray().Select(it => new System.Web.Mvc.SelectListItem
                 {{
                     Value = it.UUID,
-                    Text = it.Name,
+                    Text = it.FriendlyName,
                     Selected = {0}Value != null && {0}Value.ToString().Split(',').Contains(it.UUID,StringComparer.OrdinalIgnoreCase)
                 }});
             }}

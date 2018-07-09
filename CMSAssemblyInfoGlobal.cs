@@ -7,9 +7,9 @@
 // 
 #endregion
 using System.Reflection;
-[assembly: AssemblyCompany("Tsingbo-Kooboo")]
-[assembly: AssemblyCopyright("Copyright © Yardi 2009-2017")]
+[assembly: AssemblyCompany("Yardi Technology Limited")]
+[assembly: AssemblyCopyright("Copyright © Yardi 2009-2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("4.5.1.1202")]
-[assembly: AssemblyFileVersion("4.5.1.1202")]
+[assembly: AssemblyVersion("4.5.2.0709")]
+[assembly: AssemblyFileVersion("4.5.2.0709")]
