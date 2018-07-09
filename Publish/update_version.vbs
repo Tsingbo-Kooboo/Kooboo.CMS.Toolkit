@@ -73,7 +73,7 @@ set regex = New RegExp
 regex.Pattern = "\<version\>.*\</version\>"
 result = regex.Replace(content,"<version>"+version+"</version>")
 'delete old file 
-file.Delete(true)    
+file.Delete(true)
 'save back
 stream.Open()
 stream.WriteText(result) 
@@ -86,7 +86,5 @@ Call UpdateVersion("..\CMSAssemblyInfoGlobal.cs", version)
 
 Call UpdatePackageVersion("..\Publish\Release\Kooboo.CMS.Toolkit\Kooboo.CMS.Toolkit.nuspec", version)
 Call UpdatePackageVersion("..\Publish\Release\Kooboo.CMS.Toolkit.Controls\Kooboo.CMS.Toolkit.Controls.nuspec", version)
-Call UpdatePackageVersion("..\Publish\Release\Kooboo.Core\Kooboo.Core.nuspec", version)
-Call UpdatePackageVersion("..\Publish\Release\Kooboo.ModuleDevelopment.Binaries\Kooboo.ModuleDevelopment.Binaries.nuspec", version)
 Call UpdatePackageVersion("..\Publish\Release\Kooboo.CMS.Content.UserKeyGenerator.Chinese\Kooboo.CMS.Content.UserKeyGenerator.Chinese.nuspec", version)
 Call UpdatePackageVersion("..\Publish\Release\Kooboo.CMS.Membership.China\Kooboo.CMS.Membership.China.nuspec", version)
